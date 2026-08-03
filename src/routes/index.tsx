@@ -9,10 +9,7 @@ export const Route = createFileRoute('/')({
 
 function HomePage() {
   return (
-    <Container
-      maxWidth="sm"
-      sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
-    >
+    <Container sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Stack sx={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Paper
           sx={{

@@ -1,5 +1,5 @@
 import { createTheme } from '@mui/material/styles';
-import { green, purple } from '@mui/material/colors';
+import { green } from '@mui/material/colors';
 
 export const theme = createTheme({
   palette: {
@@ -19,9 +19,15 @@ export const theme = createTheme({
     fontFamily: 'Avenir Next, sans-serif',
   },
   components: {
-    MuiLink: {
-      defaultProps: {
-        underline: 'none',
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          backgroundColor: '#040B25',
+        },
+        a: {
+          color: '#64F58D',
+          textDecoration: 'none',
+        },
       },
     },
     MuiButton: {
@@ -32,6 +38,17 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none',
+        },
+      },
+    },
+    MuiContainer: {
+      defaultProps: {
+        maxWidth: 'sm',
+      },
+      styleOverrides: {
+        root: {
+          paddingTop: '4rem',
+          paddingBottom: '4rem',
         },
       },
     },
