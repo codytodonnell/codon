@@ -1,0 +1,3 @@
+## Overview
+
+This visualization looks at five of the most influential bands from the Alternative Rock Movement and their song durations across their entire discographies through 2015. The five bands were chosen to represent a range of music types that fall within the alternative rock genre. The bands are mapped on a scale that goes from experimental to punk. Experimental represents artists like Beck and Radiohead whose music utilizes a wide range of instruments and unconventional sounds, while punk represents artists like blink-182 and Weezer who have a more rigid and consistent sound. The graphic was coded in R and exported to Adobe Illustrator to be stylized for interpretability and aesthetics.

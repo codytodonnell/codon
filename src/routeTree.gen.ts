@@ -12,7 +12,22 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
+import { Route as ProjectsAltstreamRouteImport } from './routes/projects/altstream'
+import { Route as ProjectsBookrRouteImport } from './routes/projects/bookr'
+import { Route as ProjectsBreuerRouteImport } from './routes/projects/breuer'
+import { Route as ProjectsDurationsRouteImport } from './routes/projects/durations'
+import { Route as ProjectsElementalRouteImport } from './routes/projects/elemental'
+import { Route as ProjectsExoplanetsRouteImport } from './routes/projects/exoplanets'
+import { Route as ProjectsMaproomRouteImport } from './routes/projects/maproom'
+import { Route as ProjectsMaterialsProjectRouteImport } from './routes/projects/materials-project'
+import { Route as ProjectsMoesRouteImport } from './routes/projects/moes'
+import { Route as ProjectsNhcDataGuideRouteImport } from './routes/projects/nhc-data-guide'
+import { Route as ProjectsNirvfooRouteImport } from './routes/projects/nirvfoo'
+import { Route as ProjectsReefgaugeRouteImport } from './routes/projects/reefgauge'
+import { Route as ProjectsReshapeRouteImport } from './routes/projects/reshape'
+import { Route as ProjectsTedxRouteImport } from './routes/projects/tedx'
 import { Route as ProjectsTestRouteImport } from './routes/projects/test'
+import { Route as ProjectsTimothyRouteImport } from './routes/projects/timothy'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -29,43 +44,237 @@ const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
   path: '/projects/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsAltstreamRoute = ProjectsAltstreamRouteImport.update({
+  id: '/projects/altstream',
+  path: '/projects/altstream',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsBookrRoute = ProjectsBookrRouteImport.update({
+  id: '/projects/bookr',
+  path: '/projects/bookr',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsBreuerRoute = ProjectsBreuerRouteImport.update({
+  id: '/projects/breuer',
+  path: '/projects/breuer',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsDurationsRoute = ProjectsDurationsRouteImport.update({
+  id: '/projects/durations',
+  path: '/projects/durations',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsElementalRoute = ProjectsElementalRouteImport.update({
+  id: '/projects/elemental',
+  path: '/projects/elemental',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsExoplanetsRoute = ProjectsExoplanetsRouteImport.update({
+  id: '/projects/exoplanets',
+  path: '/projects/exoplanets',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsMaproomRoute = ProjectsMaproomRouteImport.update({
+  id: '/projects/maproom',
+  path: '/projects/maproom',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsMaterialsProjectRoute =
+  ProjectsMaterialsProjectRouteImport.update({
+    id: '/projects/materials-project',
+    path: '/projects/materials-project',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const ProjectsMoesRoute = ProjectsMoesRouteImport.update({
+  id: '/projects/moes',
+  path: '/projects/moes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsNhcDataGuideRoute = ProjectsNhcDataGuideRouteImport.update({
+  id: '/projects/nhc-data-guide',
+  path: '/projects/nhc-data-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsNirvfooRoute = ProjectsNirvfooRouteImport.update({
+  id: '/projects/nirvfoo',
+  path: '/projects/nirvfoo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsReefgaugeRoute = ProjectsReefgaugeRouteImport.update({
+  id: '/projects/reefgauge',
+  path: '/projects/reefgauge',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsReshapeRoute = ProjectsReshapeRouteImport.update({
+  id: '/projects/reshape',
+  path: '/projects/reshape',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsTedxRoute = ProjectsTedxRouteImport.update({
+  id: '/projects/tedx',
+  path: '/projects/tedx',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsTestRoute = ProjectsTestRouteImport.update({
   id: '/projects/test',
   path: '/projects/test',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProjectsTimothyRoute = ProjectsTimothyRouteImport.update({
+  id: '/projects/timothy',
+  path: '/projects/timothy',
   getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/projects/altstream': typeof ProjectsAltstreamRoute
+  '/projects/bookr': typeof ProjectsBookrRoute
+  '/projects/breuer': typeof ProjectsBreuerRoute
+  '/projects/durations': typeof ProjectsDurationsRoute
+  '/projects/elemental': typeof ProjectsElementalRoute
+  '/projects/exoplanets': typeof ProjectsExoplanetsRoute
+  '/projects/maproom': typeof ProjectsMaproomRoute
+  '/projects/materials-project': typeof ProjectsMaterialsProjectRoute
+  '/projects/moes': typeof ProjectsMoesRoute
+  '/projects/nhc-data-guide': typeof ProjectsNhcDataGuideRoute
+  '/projects/nirvfoo': typeof ProjectsNirvfooRoute
+  '/projects/reefgauge': typeof ProjectsReefgaugeRoute
+  '/projects/reshape': typeof ProjectsReshapeRoute
+  '/projects/tedx': typeof ProjectsTedxRoute
   '/projects/test': typeof ProjectsTestRoute
+  '/projects/timothy': typeof ProjectsTimothyRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/projects/altstream': typeof ProjectsAltstreamRoute
+  '/projects/bookr': typeof ProjectsBookrRoute
+  '/projects/breuer': typeof ProjectsBreuerRoute
+  '/projects/durations': typeof ProjectsDurationsRoute
+  '/projects/elemental': typeof ProjectsElementalRoute
+  '/projects/exoplanets': typeof ProjectsExoplanetsRoute
+  '/projects/maproom': typeof ProjectsMaproomRoute
+  '/projects/materials-project': typeof ProjectsMaterialsProjectRoute
+  '/projects/moes': typeof ProjectsMoesRoute
+  '/projects/nhc-data-guide': typeof ProjectsNhcDataGuideRoute
+  '/projects/nirvfoo': typeof ProjectsNirvfooRoute
+  '/projects/reefgauge': typeof ProjectsReefgaugeRoute
+  '/projects/reshape': typeof ProjectsReshapeRoute
+  '/projects/tedx': typeof ProjectsTedxRoute
   '/projects/test': typeof ProjectsTestRoute
+  '/projects/timothy': typeof ProjectsTimothyRoute
   '/projects': typeof ProjectsIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/contact': typeof ContactRoute
+  '/projects/altstream': typeof ProjectsAltstreamRoute
+  '/projects/bookr': typeof ProjectsBookrRoute
+  '/projects/breuer': typeof ProjectsBreuerRoute
+  '/projects/durations': typeof ProjectsDurationsRoute
+  '/projects/elemental': typeof ProjectsElementalRoute
+  '/projects/exoplanets': typeof ProjectsExoplanetsRoute
+  '/projects/maproom': typeof ProjectsMaproomRoute
+  '/projects/materials-project': typeof ProjectsMaterialsProjectRoute
+  '/projects/moes': typeof ProjectsMoesRoute
+  '/projects/nhc-data-guide': typeof ProjectsNhcDataGuideRoute
+  '/projects/nirvfoo': typeof ProjectsNirvfooRoute
+  '/projects/reefgauge': typeof ProjectsReefgaugeRoute
+  '/projects/reshape': typeof ProjectsReshapeRoute
+  '/projects/tedx': typeof ProjectsTedxRoute
   '/projects/test': typeof ProjectsTestRoute
+  '/projects/timothy': typeof ProjectsTimothyRoute
   '/projects/': typeof ProjectsIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/contact' | '/projects/test' | '/projects/'
+  fullPaths:
+    | '/'
+    | '/contact'
+    | '/projects/altstream'
+    | '/projects/bookr'
+    | '/projects/breuer'
+    | '/projects/durations'
+    | '/projects/elemental'
+    | '/projects/exoplanets'
+    | '/projects/maproom'
+    | '/projects/materials-project'
+    | '/projects/moes'
+    | '/projects/nhc-data-guide'
+    | '/projects/nirvfoo'
+    | '/projects/reefgauge'
+    | '/projects/reshape'
+    | '/projects/tedx'
+    | '/projects/test'
+    | '/projects/timothy'
+    | '/projects/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/contact' | '/projects/test' | '/projects'
-  id: '__root__' | '/' | '/contact' | '/projects/test' | '/projects/'
+  to:
+    | '/'
+    | '/contact'
+    | '/projects/altstream'
+    | '/projects/bookr'
+    | '/projects/breuer'
+    | '/projects/durations'
+    | '/projects/elemental'
+    | '/projects/exoplanets'
+    | '/projects/maproom'
+    | '/projects/materials-project'
+    | '/projects/moes'
+    | '/projects/nhc-data-guide'
+    | '/projects/nirvfoo'
+    | '/projects/reefgauge'
+    | '/projects/reshape'
+    | '/projects/tedx'
+    | '/projects/test'
+    | '/projects/timothy'
+    | '/projects'
+  id:
+    | '__root__'
+    | '/'
+    | '/contact'
+    | '/projects/altstream'
+    | '/projects/bookr'
+    | '/projects/breuer'
+    | '/projects/durations'
+    | '/projects/elemental'
+    | '/projects/exoplanets'
+    | '/projects/maproom'
+    | '/projects/materials-project'
+    | '/projects/moes'
+    | '/projects/nhc-data-guide'
+    | '/projects/nirvfoo'
+    | '/projects/reefgauge'
+    | '/projects/reshape'
+    | '/projects/tedx'
+    | '/projects/test'
+    | '/projects/timothy'
+    | '/projects/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ContactRoute: typeof ContactRoute
+  ProjectsAltstreamRoute: typeof ProjectsAltstreamRoute
+  ProjectsBookrRoute: typeof ProjectsBookrRoute
+  ProjectsBreuerRoute: typeof ProjectsBreuerRoute
+  ProjectsDurationsRoute: typeof ProjectsDurationsRoute
+  ProjectsElementalRoute: typeof ProjectsElementalRoute
+  ProjectsExoplanetsRoute: typeof ProjectsExoplanetsRoute
+  ProjectsMaproomRoute: typeof ProjectsMaproomRoute
+  ProjectsMaterialsProjectRoute: typeof ProjectsMaterialsProjectRoute
+  ProjectsMoesRoute: typeof ProjectsMoesRoute
+  ProjectsNhcDataGuideRoute: typeof ProjectsNhcDataGuideRoute
+  ProjectsNirvfooRoute: typeof ProjectsNirvfooRoute
+  ProjectsReefgaugeRoute: typeof ProjectsReefgaugeRoute
+  ProjectsReshapeRoute: typeof ProjectsReshapeRoute
+  ProjectsTedxRoute: typeof ProjectsTedxRoute
   ProjectsTestRoute: typeof ProjectsTestRoute
+  ProjectsTimothyRoute: typeof ProjectsTimothyRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
 
@@ -92,11 +301,116 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/altstream': {
+      id: '/projects/altstream'
+      path: '/projects/altstream'
+      fullPath: '/projects/altstream'
+      preLoaderRoute: typeof ProjectsAltstreamRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/bookr': {
+      id: '/projects/bookr'
+      path: '/projects/bookr'
+      fullPath: '/projects/bookr'
+      preLoaderRoute: typeof ProjectsBookrRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/breuer': {
+      id: '/projects/breuer'
+      path: '/projects/breuer'
+      fullPath: '/projects/breuer'
+      preLoaderRoute: typeof ProjectsBreuerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/durations': {
+      id: '/projects/durations'
+      path: '/projects/durations'
+      fullPath: '/projects/durations'
+      preLoaderRoute: typeof ProjectsDurationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/elemental': {
+      id: '/projects/elemental'
+      path: '/projects/elemental'
+      fullPath: '/projects/elemental'
+      preLoaderRoute: typeof ProjectsElementalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/exoplanets': {
+      id: '/projects/exoplanets'
+      path: '/projects/exoplanets'
+      fullPath: '/projects/exoplanets'
+      preLoaderRoute: typeof ProjectsExoplanetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/maproom': {
+      id: '/projects/maproom'
+      path: '/projects/maproom'
+      fullPath: '/projects/maproom'
+      preLoaderRoute: typeof ProjectsMaproomRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/materials-project': {
+      id: '/projects/materials-project'
+      path: '/projects/materials-project'
+      fullPath: '/projects/materials-project'
+      preLoaderRoute: typeof ProjectsMaterialsProjectRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/moes': {
+      id: '/projects/moes'
+      path: '/projects/moes'
+      fullPath: '/projects/moes'
+      preLoaderRoute: typeof ProjectsMoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/nhc-data-guide': {
+      id: '/projects/nhc-data-guide'
+      path: '/projects/nhc-data-guide'
+      fullPath: '/projects/nhc-data-guide'
+      preLoaderRoute: typeof ProjectsNhcDataGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/nirvfoo': {
+      id: '/projects/nirvfoo'
+      path: '/projects/nirvfoo'
+      fullPath: '/projects/nirvfoo'
+      preLoaderRoute: typeof ProjectsNirvfooRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/reefgauge': {
+      id: '/projects/reefgauge'
+      path: '/projects/reefgauge'
+      fullPath: '/projects/reefgauge'
+      preLoaderRoute: typeof ProjectsReefgaugeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/reshape': {
+      id: '/projects/reshape'
+      path: '/projects/reshape'
+      fullPath: '/projects/reshape'
+      preLoaderRoute: typeof ProjectsReshapeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/tedx': {
+      id: '/projects/tedx'
+      path: '/projects/tedx'
+      fullPath: '/projects/tedx'
+      preLoaderRoute: typeof ProjectsTedxRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/test': {
       id: '/projects/test'
       path: '/projects/test'
       fullPath: '/projects/test'
       preLoaderRoute: typeof ProjectsTestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/projects/timothy': {
+      id: '/projects/timothy'
+      path: '/projects/timothy'
+      fullPath: '/projects/timothy'
+      preLoaderRoute: typeof ProjectsTimothyRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -105,7 +419,22 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ContactRoute: ContactRoute,
+  ProjectsAltstreamRoute: ProjectsAltstreamRoute,
+  ProjectsBookrRoute: ProjectsBookrRoute,
+  ProjectsBreuerRoute: ProjectsBreuerRoute,
+  ProjectsDurationsRoute: ProjectsDurationsRoute,
+  ProjectsElementalRoute: ProjectsElementalRoute,
+  ProjectsExoplanetsRoute: ProjectsExoplanetsRoute,
+  ProjectsMaproomRoute: ProjectsMaproomRoute,
+  ProjectsMaterialsProjectRoute: ProjectsMaterialsProjectRoute,
+  ProjectsMoesRoute: ProjectsMoesRoute,
+  ProjectsNhcDataGuideRoute: ProjectsNhcDataGuideRoute,
+  ProjectsNirvfooRoute: ProjectsNirvfooRoute,
+  ProjectsReefgaugeRoute: ProjectsReefgaugeRoute,
+  ProjectsReshapeRoute: ProjectsReshapeRoute,
+  ProjectsTedxRoute: ProjectsTedxRoute,
   ProjectsTestRoute: ProjectsTestRoute,
+  ProjectsTimothyRoute: ProjectsTimothyRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }
 export const routeTree = rootRouteImport

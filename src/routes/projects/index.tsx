@@ -1,12 +1,11 @@
 import { Container, List, ListItem, ListItemText, Typography } from '@mui/material';
 import { createFileRoute } from '@tanstack/react-router';
 import { AppLink } from '../../components/AppLink';
+import { projectRoutes } from '../../data/projectRoutes';
 
 export const Route = createFileRoute('/projects/')({
   component: ProjectsListPage,
 });
-
-const projectRoutes = [{ to: '/projects/test', name: 'test' }];
 
 function ProjectsListPage() {
   return (
@@ -22,7 +21,7 @@ function ProjectsListPage() {
         {projectRoutes.map((project) => (
           <ListItem key={project.to} disablePadding>
             <AppLink to={project.to} sx={{ width: '100%', paddingY: 1, textDecoration: 'none' }}>
-              <ListItemText primary={project.name} />
+              <ListItemText primary={project.title} secondary={project.date} />
             </AppLink>
           </ListItem>
         ))}

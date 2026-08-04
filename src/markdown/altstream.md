@@ -1,0 +1,3 @@
+## Overview
+
+Alt Stream visually represents the discographies of the most influential bands from the peak of the alternative rock movement. When did alternative rock peak? What qualities characterize the songs from these bands? How did these bands progress into modern music? The hope is that this interactive visualization helps users answer these questions and raise new questions of their own. There are two main components to The Alt Stream visualization: data collection and data visualization. I am using AJAX requests to collect data from both the Spotify API and Echo Nest API, and D3 to build a web-based visualization using that data.

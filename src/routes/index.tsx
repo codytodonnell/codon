@@ -1,4 +1,5 @@
-import { Button, Container, Paper, Stack, Typography } from '@mui/material';
+import { Button, Container, Link, Paper, Stack, Typography } from '@mui/material';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { alpha } from '@mui/material/styles';
 import { createFileRoute } from '@tanstack/react-router';
 import { AppLink } from '../components/AppLink';
@@ -24,17 +25,30 @@ function HomePage() {
           <Stack spacing={1}>
             <Typography variant="body1">Welcome to codonn, I'm Cody O'Donnell.</Typography>
             <Typography variant="body1">
-              I'm a<strong> Research Software Engineer </strong>who specializes in building
+              I'm a<strong> Research Software Engineer </strong>who specializes in designing and
+              building
               <strong> data-intensive web applications </strong>.
             </Typography>
             <Typography variant="body1">
-              I love combining facets of design, UX, and engineering to build interfaces and data
-              visualizations that help people solve pressing problems in the
-              <strong> scientific community </strong>.
+              I currently work at the{' '}
+              <Link href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">
+                Lawrence Berkeley National Laboratory
+              </Link>{' '}
+              in the{' '}
+              <Link
+                href="https://scidata.lbl.gov/research-areas/groups/scientific-data-management-usable-data-systems/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Usable Data Systems
+              </Link>{' '}
+              group.
             </Typography>
           </Stack>
           <AppLink to="/projects" sx={{ marginTop: 2, display: 'block' }}>
-            <Button fullWidth>Explore projects</Button>
+            <Button fullWidth endIcon={<ArrowForwardIcon />}>
+              Explore projects
+            </Button>
           </AppLink>
         </Paper>
       </Stack>

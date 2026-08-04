@@ -1,0 +1,14 @@
+import { createFileRoute } from '@tanstack/react-router';
+import { ProjectPage } from '../../components/ProjectPage';
+import { getProjectById } from '../../data/projectRoutes';
+import markdownContent from '../../markdown/altstream.md?raw';
+
+const project = getProjectById('altstream');
+
+export const Route = createFileRoute('/projects/altstream')({
+  component: AltstreamProjectRoute,
+});
+
+function AltstreamProjectRoute() {
+  return <ProjectPage project={project} markdownContent={markdownContent} />;
+}

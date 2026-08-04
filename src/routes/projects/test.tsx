@@ -1,4 +1,4 @@
-import { Container, Paper, Typography } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 import { createFileRoute } from '@tanstack/react-router';
 import ReactMarkdown from 'react-markdown';
 import markdownContent from '../../markdown/test.md?raw';

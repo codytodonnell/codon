@@ -30,6 +30,11 @@ export const theme = createTheme({
         },
       },
     },
+    MuiLink: {
+      defaultProps: {
+        underline: 'hover',
+      },
+    },
     MuiButton: {
       defaultProps: {
         variant: 'contained',
