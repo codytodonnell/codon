@@ -1,5 +1,5 @@
 import { Box, Stack, Typography } from '@mui/material';
-import type { ProjectRoute } from '../data/projectRoutes';
+import type { ProjectRoute } from '../data/projects';
 
 type ProjectHeaderProps = {
   project: ProjectRoute;
@@ -7,7 +7,9 @@ type ProjectHeaderProps = {
 
 export function ProjectHeader({ project }: ProjectHeaderProps) {
   const coverImagePath =
-    project.coverImage.length > 0 ? `/images/projects/${project.id}/${project.coverImage}` : undefined;
+    project.coverImage.length > 0
+      ? `/images/projects/${project.id}/${project.coverImage}`
+      : undefined;
 
   return (
     <Stack spacing={2} sx={{ marginBottom: 4 }}>
