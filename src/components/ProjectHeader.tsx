@@ -30,7 +30,7 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
           }}
         />
       )}
-      <Typography variant="h6" component="p" color="text.secondary">
+      <Typography component="p" color="text.secondary">
         {project.description}
       </Typography>
       <Stack direction="row" spacing={1}>

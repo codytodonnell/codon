@@ -1,4 +1,5 @@
-import { Box, Container } from '@mui/material';
+import { Box, Button, Container } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ReactMarkdown from 'react-markdown';
 import { ProjectHeader } from './ProjectHeader';
 import type { ProjectMetadata } from '../data/projects';
@@ -11,6 +12,15 @@ type ProjectPageProps = {
 export function ProjectPage({ project, markdownContent }: ProjectPageProps) {
   return (
     <Container>
+      <Button
+        variant="text"
+        color="primary"
+        startIcon={<ArrowBackIcon />}
+        sx={{ marginBottom: 1, paddingX: 2 }}
+        href="/projects"
+      >
+        Back to projects
+      </Button>
       <ProjectHeader project={project} />
       <Box
         sx={{

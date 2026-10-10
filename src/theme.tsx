@@ -18,6 +18,7 @@ export const theme = createTheme({
   },
   typography: {
     fontFamily: 'Avenir Next, sans-serif',
+    fontSize: 16,
   },
   components: {
     MuiCssBaseline: {

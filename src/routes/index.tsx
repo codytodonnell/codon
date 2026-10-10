@@ -1,8 +1,8 @@
 import { Button, Container, Link, Paper, Stack, Typography } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import { alpha } from '@mui/material/styles';
 import { createFileRoute } from '@tanstack/react-router';
 import { AppLink } from '../components/AppLink';
+import { PageTitle } from '../components/PageTitle';
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -15,21 +15,19 @@ function HomePage() {
         <Paper
           sx={{
             padding: 4,
-            backgroundColor: (theme) => alpha(theme.palette.background.paper, 0.2),
+            backgroundColor: 'secondary.dark',
             borderRadius: 2,
           }}
         >
-          <Typography variant="h4" component="h1" gutterBottom>
-            codonn
-          </Typography>
+          <PageTitle variant="h2">codonn</PageTitle>
           <Stack spacing={1}>
-            <Typography variant="body1">Welcome to codonn, I'm Cody O'Donnell.</Typography>
-            <Typography variant="body1">
+            <Typography>Welcome to codonn, I'm Cody O'Donnell.</Typography>
+            <Typography>
               I'm a<strong> Research Software Engineer </strong>who specializes in designing and
               building
               <strong> data-intensive web applications </strong>.
             </Typography>
-            <Typography variant="body1">
+            <Typography>
               I currently work at the{' '}
               <Link href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">
                 Lawrence Berkeley National Laboratory
@@ -46,7 +44,7 @@ function HomePage() {
             </Typography>
           </Stack>
           <AppLink to="/projects" sx={{ marginTop: 2, display: 'block' }}>
-            <Button fullWidth endIcon={<ArrowForwardIcon />}>
+            <Button size="large" endIcon={<ArrowForwardIcon />}>
               Explore projects
             </Button>
           </AppLink>

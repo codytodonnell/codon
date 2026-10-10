@@ -201,7 +201,7 @@ export const projects: ProjectMetadata[] = [
     description:
       'A collaborative mapping classroom activity designed to raise students’ awareness of the importance of equitable information dissemination during natural disasters.',
     contributions: [],
-    coverImage: '',
+    coverImage: 'maproom-context.jpg',
     productType: 'toolkit',
     prototypeInteractive: false,
     prototypeFile: 'maproom-toolkit.pdf',

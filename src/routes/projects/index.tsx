@@ -17,7 +17,7 @@ function ProjectsListPage() {
     <Container>
       <PageTitle>Projects</PageTitle>
       <Typography variant="body1" sx={{ marginBottom: 2 }}>
-        Browse current and past Codonn projects.
+        Browse current and past codonn projects.
       </Typography>
       <Grid container spacing={2} sx={{ marginBottom: 2 }}>
         {sortedProjects.map((project) => (
