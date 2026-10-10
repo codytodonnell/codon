@@ -1,6 +1,6 @@
-import { Container, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import { createFileRoute } from '@tanstack/react-router';
-import { AppLink } from '../../components/AppLink';
+import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
 
 export const Route = createFileRoute('/projects/')({
@@ -8,24 +8,25 @@ export const Route = createFileRoute('/projects/')({
 });
 
 function ProjectsListPage() {
+  const sortedProjects = [...projects].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
   return (
     <Container>
-      <Typography variant="h4" component="h2" gutterBottom>
+      <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
         Projects
       </Typography>
       <Typography variant="body1" sx={{ marginBottom: 2 }}>
-        Browse current and past Codonn work here.
+        Browse current and past Codonn projects.
       </Typography>
-
-      <List sx={{ padding: 0 }}>
-        {projects.map((project) => (
-          <ListItem key={project.to} disablePadding>
-            <AppLink to={project.to} sx={{ width: '100%', paddingY: 1, textDecoration: 'none' }}>
-              <ListItemText primary={project.title} secondary={project.date} />
-            </AppLink>
-          </ListItem>
+      <Grid container spacing={2} sx={{ marginBottom: 2 }}>
+        {sortedProjects.map((project) => (
+          <Grid size={{ xs: 12, sm: 6 }} key={project.to}>
+            <ProjectItem project={project} />
+          </Grid>
         ))}
-      </List>
+      </Grid>
     </Container>
   );
 }

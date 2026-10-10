@@ -1,8 +1,8 @@
 import { Box, Stack, Typography } from '@mui/material';
-import type { ProjectRoute } from '../data/projects';
+import type { ProjectMetadata } from '../data/projects';
 
 type ProjectHeaderProps = {
-  project: ProjectRoute;
+  project: ProjectMetadata;
 };
 
 export function ProjectHeader({ project }: ProjectHeaderProps) {

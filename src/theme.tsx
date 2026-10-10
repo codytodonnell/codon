@@ -1,19 +1,19 @@
 import { createTheme } from '@mui/material/styles';
-import { green } from '@mui/material/colors';
 
 export const theme = createTheme({
   palette: {
     mode: 'dark',
     background: {
       default: '#040B25',
-      paper: '#0C216E',
+      paper: '#081649',
     },
     primary: {
       main: '#64F58D',
     },
     secondary: {
-      main: green[500],
+      main: '#081649',
     },
+    divider: '#444444',
   },
   typography: {
     fontFamily: 'Avenir Next, sans-serif',
@@ -48,7 +48,7 @@ export const theme = createTheme({
     },
     MuiContainer: {
       defaultProps: {
-        maxWidth: 'sm',
+        maxWidth: 'md',
       },
       styleOverrides: {
         root: {

@@ -1,10 +1,10 @@
 import { Box, Container } from '@mui/material';
 import ReactMarkdown from 'react-markdown';
-import type { ProjectRoute } from '../data/projects';
 import { ProjectHeader } from './ProjectHeader';
+import type { ProjectMetadata } from '../data/projects';
 
 type ProjectPageProps = {
-  project: ProjectRoute;
+  project: ProjectMetadata;
   markdownContent: string;
 };
 
