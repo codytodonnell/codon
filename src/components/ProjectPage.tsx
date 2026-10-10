@@ -10,7 +10,7 @@ type ProjectPageProps = {
 
 export function ProjectPage({ project, markdownContent }: ProjectPageProps) {
   return (
-    <Container sx={{ paddingY: 4 }}>
+    <Container>
       <ProjectHeader project={project} />
       <Box
         sx={{

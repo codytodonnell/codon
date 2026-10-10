@@ -12,6 +12,7 @@ export const theme = createTheme({
     },
     secondary: {
       main: '#081649',
+      light: '#91A6F3',
     },
     divider: '#444444',
   },
@@ -52,8 +53,8 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          paddingTop: '4rem',
-          paddingBottom: '4rem',
+          paddingTop: '6rem',
+          paddingBottom: '6rem',
         },
       },
     },

@@ -2,6 +2,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import { createFileRoute } from '@tanstack/react-router';
 import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
+import { PageTitle } from '../../components/PageTitle';
 
 export const Route = createFileRoute('/projects/')({
   component: ProjectsListPage,
@@ -14,9 +15,7 @@ function ProjectsListPage() {
 
   return (
     <Container>
-      <Typography variant="h3" component="h2" gutterBottom sx={{ fontWeight: 'bold' }}>
-        Projects
-      </Typography>
+      <PageTitle>Projects</PageTitle>
       <Typography variant="body1" sx={{ marginBottom: 2 }}>
         Browse current and past Codonn projects.
       </Typography>

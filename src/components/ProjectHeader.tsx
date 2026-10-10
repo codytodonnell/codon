@@ -1,5 +1,7 @@
-import { Box, Stack, Typography } from '@mui/material';
+import { Box, Chip, Stack, Typography } from '@mui/material';
 import type { ProjectMetadata } from '../data/projects';
+import { PageTitle } from './PageTitle';
+import { formatDate } from '../utils';
 
 type ProjectHeaderProps = {
   project: ProjectMetadata;
@@ -13,15 +15,7 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
 
   return (
     <Stack spacing={2} sx={{ marginBottom: 4 }}>
-      <Typography variant="h3" component="h1">
-        {project.title}
-      </Typography>
-      <Typography variant="subtitle1" color="text.secondary">
-        {project.date}
-      </Typography>
-      <Typography variant="h6" component="p" color="text.secondary">
-        {project.description}
-      </Typography>
+      <PageTitle>{project.title}</PageTitle>
       {coverImagePath && (
         <Box
           component="img"
@@ -36,6 +30,15 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
           }}
         />
       )}
+      <Typography variant="h6" component="p" color="text.secondary">
+        {project.description}
+      </Typography>
+      <Stack direction="row" spacing={1}>
+        <Chip label={formatDate(project.date)} variant="outlined" />
+        {project.tags.map((tag) => (
+          <Chip key={tag} label={tag} />
+        ))}
+      </Stack>
     </Stack>
   );
 }

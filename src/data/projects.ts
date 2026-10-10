@@ -24,7 +24,7 @@ export const projects: ProjectMetadata[] = [
     title: 'The Materials Project',
     thumbnail: 'materials-project-cover.png',
     tags: ['Civic Data', 'UX Design', 'Data Visualization'],
-    date: '8/17/2020',
+    date: '6/3/2022',
     description:
       'A materials science data platform with computed information on known and predicted materials as well as powerful analysis tools to inspire and design novel materials.',
     contributions: [],
