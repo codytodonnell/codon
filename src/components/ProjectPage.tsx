@@ -56,6 +56,8 @@ export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
             component="article"
             sx={{
               '& h2': {
+                fontSize: '1.5rem',
+                fontWeight: 'bold',
                 marginTop: 4,
                 marginBottom: 1,
               },
