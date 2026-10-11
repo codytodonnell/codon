@@ -10,6 +10,8 @@ The overarching goal of the ReshapeWeb project was to improve an existing deskto
 
 We ultimately decided that Mapbox and D3 would be the best tools for ReShapeWeb. Mapbox, on top of being inexpensive, provided strong and flexible capabilities in both base-map creation and interactive map visualization. These two features were key to the development of our tool which made Mapbox and their javascript library, Mapbox-GL, a great choice for our project. Aside from the need to visualize data geospatially, we also needed a way to visualize data over time outside of a map context. For this reason we chose D3 for its incredibly flexible and dynamic capabilities to visualize temporal data. With these two tools, I began prototyping much of the initial functionality that we knew would be critical for the final product. This included features like geographic path drawing, space over time visualization, spatial filtering, and temporal filtering.
 
+![Temporal visualization with brush filter](/images/projects/reshape/reshape-brush.png)
+
 ## Observational Study
 
 The goal of ReshapeWeb was not just to adapt an existing tool into the web. It was also to expand the capabilities offered by the desktop tool and to develop new and better ways for students to interact with their geography. To inform the design of ReShapeWeb I conducted an observational study with an undergraduate Computer Science class that was using the original ReShape tool as part of a class activity. This study allowed me to collect rich observational data about how students interact with their data, the pain points they encounter, the questions they ask, and the observations they make. This data became crucial to the next phase of development.
@@ -18,9 +20,13 @@ The goal of ReshapeWeb was not just to adapt an existing tool into the web. It w
 
 Based on observations made during the class activity, I developed additional features and continued fleshing out features that were validated by my observations. This included the addition of features like dynamic base-map selection, dynamic movement metric selection, and dynamic data uploading.
 
+![Web app base map data layer selection](/images/projects/reshape/reshape-data-layers.png)
+
 ## Implementation
 
 After the prototype was fleshed out, the tool was implemented in a class activity within an undergraduate Ethics in Computer Science course. During this implementation, the tool was given to a group of 5 students who collaboratively visualized and analyzed their data together on a large shared monitor. After the in-class activity, students reflected on their experience in a short essay about data ethics, personal geography, personal relationships to data, and privacy.
+
+![Students in classroom using Reshape](/images/projects/reshape/reshape-implementation.png)
 
 ## Publishing to CHI
 

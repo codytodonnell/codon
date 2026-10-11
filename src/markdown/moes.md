@@ -14,6 +14,8 @@ To immerse ourselves in the context of our project, we conducted 3 separate hour
 
 We conducted an online customer survey with two main goals: gather potential interview participants and collect information about customers’ attitudes towards voice interaction technology. Our primary goal was to gather interview participants so we included only a few questions related to voice interaction technology, but the results we obtained were very telling. Very few Moe’s customers used voice interaction technology and even fewer liked voice interaction technology.
 
+![Moe's customer survey pie chart](/images/projects/moes/moes-survey.png)
+
 ## Interviews
 
 After obtaining participants through the survey, we conducted several semi-structured interviews with customers. We made an effort to conduct several interviews with customers who had used voice interaction technology before and several interviews with customers who hadn’t. We also conducted two interviews with former Moe’s employees to gather a behind-the-scenes perspective on the process of fulfilling orders.
@@ -30,10 +32,18 @@ Our presentation to our Moe’s industry partner painted a clear picture of the 
 
 We needed a rapid understanding of how users viewed and interacted with the new Moe’s experience and needed a framework for the voice interaction prototype embodying that space that we would be creating for our industry partners. A participatory design session was a logical choice involving users in a contained exposure to the to the new space and actively working together to envision a prototype or parameters for a prototype that could eventually be developed. As a team we designed an almost 3-hour session that would bring in 6 Moe’s customers and pit them in situations where they could creatively design and react to voice interaction technologies.
 
+![Brainstorming inside Moe's](/images/projects/moes/moes-pd-brainstorm.png)
+
 ## Affinity Mapping
 
 Now that we had finally finished conducting as much user research as we could, we analyzed all of our data using a massive affinity map. This process allowed us to identify patterns in the data from across all of our research methods and develop a useful set of design implications for our voice ordering prototype.
 
+![Moe's affinity map](/images/projects/moes/moes-affinity.JPG)
+
 ## Voice Ordering Prototype
 
 The final prototype was built as a low-fidelity Google Skill that allows customers to go through the Moe’s ordering process completely through voice interaction. Though there are many technical limitations of our prototype, we incorporated several of the intricacies we discovered through our research such as protein specifications and cheese specifications. The primary goal of the prototype was to demonstrate a proof-of-concept for Moe’s voice ordering, while also demonstrating to our Moe’s partners the intricacies and technical barriers that implementing a voice ordering tool would entail. The prototype was delivered along with an actionable set of guidelines to consider if Moe’s chooses to further implement voice ordering in the future.
+
+![Prototype intents diagram](/images/projects/moes/moes-intents.png)
+
+![Prototype chat screenshot](/images/projects/moes/moes-chat.png)

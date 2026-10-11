@@ -6,9 +6,13 @@ In collaboration with the [Atlanta Map Room](http://loukissas.lmc.gatech.edu/unc
 
 The Map Room is a collaborative space that reimagines the way people interact with civic data and local geographies. The concept combines a downward-facing projector, a large-table, a long piece of white construction paper, and mapping software to create a space and interface where people can explore their communities through data, geography, and local knowledge. Our Map Room Teaching Toolkit project was carried out in collaboration with Dr. Yanni Loukissas, one of the creators of the Map Room, and Woodville-Tompkins High School in Savannah, Georgia. After learning about the Map Room, the school became huge believers in its potential as an educational technology — so much so that they plan to install a dedicated Map Room in their school. This is great news for the Map Room project, but it’s not enough for the school to simply install a Map Room — their teachers have to be equipped with how to make the best possible use of the technology. That’s where our activity and the Map Room Teaching Toolkit come in.
 
+![Atlanta Map Room photo](/images/projects/maproom/maproom-background.png)
+
 ## Visiting the Context
 
 After the school expressed interest in integrating the Map Room into their school and curricula, our team, along with Dr. Loukissas and several other local stakeholders, took a trip to the school to demonstrate the Map Room to the teachers and to collect information from the teachers to inform our design process. At this point there were a lot of unknowns. Did the school want a permanent Map Room? Which teachers would find the Map Room most useful? What types of topics do teachers think would integrate well with the Map Room? After demoing the Map Room with seven teachers, we sat down with all of the teachers together to discuss their reactions and ideas. All of the teachers were extremely enthusiastic about the technology. The teachers are always looking for new ways to engage students with their content and the Map Room presents an exciting new way to do just that. Overall the visit to the school made two things clear: teachers are excited about using this technology in their classrooms and teachers would need help using the technology successfully.
+
+![Atlanta Map Room photo](/images/projects/maproom/maproom-background.png)
 
 ## Narrowing the Context
 
@@ -18,10 +22,20 @@ Several of the teachers that were most enthusiastic about the Map Room were Span
 
 Our overarching design goal became this: design a map-based activity that raises students’ awareness of the importance of equitable information dissemination during natural disasters. We knew this was a relevant issue for Chatham County, but we had trouble finding the right type of data that would integrate well with both the context of the design problem and the Map Room technology. The most relevant data we wrangled was the population density of Spanish-speaking households in Chatham. While relevant, we needed something more concrete. Our next thought was to look for relevant social media posts in Spanish, but we soon learned that these data were low quality, unpredictable, and difficult to design a structured activity around. This lead to one of our first design decisions: let students collect data directly from local Spanish speakers. After fleshing this out into a full activity we presented our ideas to our advisor and other subject matter experts at various stages in our design process. After each of these feedback sessions, we iterated on our design, making incremental improvements each time.
 
+![Map room whiteboard notes](/images/projects/maproom/maproom-whiteboard.png)
+
+![Map room storyboard flow](/images/projects/maproom/maproom-storyboard.png)
+
 ## Final Activity Design
 
 Our final design takes the best elements from iteration, forming a cohesive activity that hits at three learning outcomes: (1) Students will be able to discuss and critically examine the role that language and media play in the dissemination of  information during natural disasters in Chatham County. (2) Students will be able to engage in realistic dialogue with Spanish-speaking members of their community. and (3) Students will deepen their understanding of Spanish vocabulary related to hurricanes and emergency preparedness. The activity has six parts that all work together to accomplish the above learning outcomes. Part one is the interviews students do with local Spanish speakers. This gives students a chance to interact directly with Spanish speakers and collect information about their experiences with getting information during a hurricane. Part two is the interviews students do with each other about their experiences during hurricanes. These interviews act as a baseline by which to compare their interviews with Spanish speakers. Part three has students gather examples of hurricane media based on both sets of interviews. These will be news articles, social media posts, or emergency alerts that interviewees had utilized during a hurricane. Part four is the map data layers that pertain to this discussion. These can be layers like the Spanish speaking population density in Chatham and the Chatham County Evacuation Zones. Part 5 brings parts 1-4 together into a collaborative mapping exercise. During this exercise students follow a set of instructions to translate each interview into a data point on the map. Each data point will tell you what type of information source the person relied on and what langugae it was in, how they heard about the evacuation, whether or not they evacuated, whether or not the person felt prepared, and their greatest challenge throughout the hurricane. Part 6 engages students with a set of discussion questions around the map of all of their data and what it says about the equitable dissemination of information during hurricanes in Chatham.
 
+![Map room stickers concept](/images/projects/maproom/maproom-stickers.png)
+
+![Map room stickers house concept](/images/projects/maproom/maproom-data-house.png)
+
 ## The Toolkit
 
 The last thing to do was synthesize this activity into an actionable toolkit for students and instructors. The final toolkit consists of four parts: an instructor guide, a student guide, a data guide, and mapping instructions. This toolkit gives instructors everything they would need to carry out and adapt this activity into their own classroom.
+
+![Map room toolkit hurricane instructor guide](/images/projects/maproom/maproom-toolkit-1.png)

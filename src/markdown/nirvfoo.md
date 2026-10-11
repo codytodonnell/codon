@@ -10,6 +10,8 @@ I started this project by identifying a goal and several guiding questions. The 
 
 To find data about the two bands’ popularity, I used sources like Billboard and Wikipedia. These both offered well structured and complete data on the bands’ album sales as well as their individual songs that reached the Billboard’s Alternative Top 100. Getting data about the actual sound quality of the two bands was initially tricky. I initially explored characteristics like song duration which were easily available and began generating some sketches. After some exploring, I came across the Spotify and Echo Nest API’s. These API’s had audio feature data for every song by both Nirvana and Foo Fighters. I was able to pull data from Echo Nest and save it down in a usable JSON format. This provided attributes like song valence, acousticness, loudness, time signature, and several others.
 
+![Nirvana and Foo Fighters line graph sketch](/images/projects/nirvfoo/nirvfoo-sketch-1.png)
+
 ## Visualization + Narrative
 
 After exploring the data and generating several sketches of what I wanted to visualize, I began visualizing the data in R. I chose several different visualization methods based on the type of data that proved most interesting. I used stacked bar chart and filled line graphs for the more simple datasets related to popularity, and I used more complicated chart types to visualize the multi-variate relationships existent in the two bands’ sound data. After generating all of the visualizations in R, I exported everything into Adobe Illustrator to style the graphics and shape the overall narrative of the analysis.

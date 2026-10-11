@@ -14,13 +14,23 @@ After an extensive dive into what types of tools and data exist in this space al
 
 One of the most challenging parts of the process was translating the interviews into actionable insights. I collected 10 hours of audio and dozens of pages of notes from the interviews but I needed to boil this down into information that I could use to ultimately design a solution. I chose to build a hierarchical affinity diagram out of my interviews. This started with revisiting the audio and notes from each interview and recording discrete affinity notes. With around 50 notes per interview, I was able to group notes into themes and categories that began to tell a cohesive story about divers. Among my findings were that (1) diving and the ocean are part of divers’ identity, (2) the dive community is an agent of education and action, and (3) divers are inclined to critically engage with environmental data.
 
+![Scuba divers interviews affinity map](/images/projects/reefgauge/rg-affinity.jpg)
+
 ## Walking the Wall
 
 Now that I had an affinity diagram that wrapped all of my interview data into a digestible artifact, it was time to discern which design directions best followed the insights about the users I studied. Although I grew intimately knowledgeable about the data I collected, I knew that I alone could only generate so many distinct and innovative designs. For this reason, I decided to put together a team of design experts to "walk the wall" of affinity with me. Together, myself and three other experts in design and education technology analyzed a physical print-out of the affinity diagram and silently noted design ideas and design implications as we digested the information. Afterwards, we reconvened for 20 minutes of brainstorming. I facilitated the brainstorm and captured high-level ideas in a concept map.
 
+![Researchers and designers walking the affinity wall](/images/projects/reefgauge/rg-wall-people.jpg)
+
 ## Divergent Designs
 
 Walking the wall brought the user research data one step closer to action. Based on the outputs from this session, I began sketching out different design ideas that reflected my findings. Some of these designs leaned more into the citizen science realm, while others leaned more into the storytelling realm, while others leaned more into the education realm.
+
+![Scuba diver app sketch](/images/projects/reefgauge/rg-divergent-1.jpg)
+
+![Scuba diver app sketch](/images/projects/reefgauge/rg-divergent-2.jpg)
+
+![Scuba diver app sketch](/images/projects/reefgauge/rg-divergent-3.jpg)
 
 ## Design Solution
 
@@ -30,13 +40,19 @@ In choosing an ultimate design solution, my primary considerations were how well
 
 Prototyping the tool involved a parallel process of analyzing my primary data set of reef information, learning as much as I can about coral reef health, building an information architecture around my design and data sets, developing technical data visualization prototypes, and building testable static prototypes.
 
+![Reef health assessments map prototype](/images/projects/reefgauge/rg-map-prototype.png)
+
 ## Prototype Interviews
 
 Once I had a fleshed out static prototype, I wanted to get feedback from my user base to help me confirm which parts of my design were striking a chord and which parts needed revision. With paper print-out versions my prototype, I conducted two rounds of paper prototype interviews with users. I moderated these sessions with users but encouraged users to mark up, re-design, and play with the paper prototype as much as they wanted. This process gave me a ton of insight into my design and gave me the information I needed to start building out a functional web tool.
 
+![Scuba diver app sketch](/images/projects/reefgauge/rg-proto-interview-1.jpg)
+
 ## Functional Prototype
 
 While some pieces of the static prototype tested well, such as the overall information architecture and map-based visualizations, others did not. Based on the prototype tests with users, I decided to scrap the non-geospatial visualization component of the tool and focus my efforts on the geospatial map views instead. Another major breakthrough that happened at this point in the project was my discovery of a data source for community data. Originally I had planned to build in the crowdsourcing functionality into ReefGauge, but after discovering a platform called iNaturalist, I saw an opportunity to leverage their existing infrastructure. The final functional prototype includes a map visualization that users can toggle between scientific reef assessment data and community-sourced reef observation data. The scientific data is sourced from a site called the Atlantic and Gulf Rapid Reef Assessment (AGRRA) and the community data is sourced through a citizen science platform called iNaturalist. Leveraging iNaturalist’s Project feature, I was able to build my own citizen science initiative that sources observations of the reef species I am targeting. This lets my ReefGauge encourage an initiative around reef data collection while offloading the data input functionality to iNaturalist.
+
+![ReefGauge functional web app prototype](/images/projects/reefgauge/rg-functional-2.png)
 
 ## Usability Tests
 

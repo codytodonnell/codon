@@ -6,10 +6,18 @@ Civic organizations make tons of data available to the public but rarely would a
 
 The first step in this process was diving into the data. My partner and I each had only a tertiary understanding of the way hurricane data were collected, stored, and published so it took time to become familiar with NHC’s archive. We primarily used several of the most handy python tools to parse through the hurricane data and get a sense of what was inside the archive. Along the way, we documented all of the unfamiliar terms we came across as well as any questions we had about the data and how they were collected. After learning more about the relevant hurricane jargon and the hurricane data life cycle, we began creating exploratory visualizations to help both us and users of the guide better understand the data stored in the NHC archive.
 
+![Hurricane data in python](/images/projects/nhc-data-guide/nhc-data-guide-python.png)
+
 ## Contextual Interview
 
 While our exploration into the data was extensive and fruitful, it yielded many unanswered questions. To help answer some of these questions and ground our understanding of the data in reality, we interviewed someone that had professional experience with hurricane and weather data. Our interviewee was a meteorologist for a private company that helped provide weather insights to sports franchises. Learning about her experience interpreting hurricane information turned out to be immensely helpful as she was able to provide much-needed context to many of the numbers we were seeing inside the data.
 
+![Hurricane data process whiteboarding](/images/projects/nhc-data-guide/nhc-data-guide-whiteboard.jpg)
+
 ## Putting it All Together
 
 After rounding out our initial explorations with more grounded information from the meteorologist, we started building the guide itself. The final product has seven different sections that altogether aim to get the reader well on their way to understanding hurricane data and how to work with it.
+
+![Hurricane data lifecycle diagram](/images/projects/nhc-data-guide/nhc-data-guide-cycle.png)
+
+![Hurricane advisories visualization](/images/projects/nhc-data-guide/nhc-data-guide-visualization.png)
