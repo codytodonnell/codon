@@ -10,7 +10,7 @@ function AboutPage() {
   return (
     <Container>
       <PageTitle>About</PageTitle>
-      <Typography sx={{ fontSize: '1.25rem' }}>
+      <Typography sx={{ fontSize: '1.25rem', marginTop: 2 }}>
         I currently work at the{' '}
         <Link href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">
           Lawrence Berkeley National Laboratory

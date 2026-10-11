@@ -1,27 +1,29 @@
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { AppBar, Box, Container, Stack, Toolbar } from '@mui/material';
+import { AppBar, Box, Container, Stack, Toolbar, useMediaQuery, useTheme } from '@mui/material';
 import { useRouterState } from '@tanstack/react-router';
 import { AppLink } from './AppLink';
 
 export const Navbar = () => {
-  const links = useMemo(
-    () => [
-      { to: '/', label: 'Home' },
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const links = useMemo(() => {
+    const homeLink = !isMobile ? { to: '/', label: 'Home' } : null;
+    return [
+      ...(homeLink ? [homeLink] : []),
       { to: '/projects', label: 'Projects' },
       { to: '/about', label: 'About' },
       { to: '/contact', label: 'Contact' },
-    ],
-    [],
-  );
+    ];
+  }, [isMobile]);
   const pathname = useRouterState({ select: (state) => state.location.pathname });
   const activeIndex = useMemo(() => {
-    if (pathname === '/') {
+    if (pathname === '/' && !isMobile) {
       return 0;
     }
 
     const matchIndex = links.findIndex((link) => link.to !== '/' && pathname.startsWith(link.to));
-    return matchIndex === -1 ? 0 : matchIndex;
-  }, [links, pathname]);
+    return matchIndex;
+  }, [links, pathname, isMobile]);
 
   const itemRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [indicator, setIndicator] = useState({ left: 0, width: 0 });
@@ -30,6 +32,8 @@ export const Navbar = () => {
     const updateIndicator = () => {
       const activeItem = itemRefs.current[activeIndex];
       if (!activeItem) {
+        // No active link (e.g. Home on mobile): hide the indicator.
+        setIndicator({ left: 0, width: 0 });
         return;
       }
 

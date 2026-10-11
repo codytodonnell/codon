@@ -1,4 +1,13 @@
-import { Box, Button, Container, Grid, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
@@ -37,6 +46,9 @@ const getHeadings = (markdown: string) => {
 export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
   const articleRef = useRef<HTMLElement | null>(null);
   const headings = useMemo(() => getHeadings(markdownContent), [markdownContent]);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   return (
     <Container maxWidth="md">
       <Grid container spacing={3}>
@@ -72,65 +84,67 @@ export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
             <ReactMarkdown rehypePlugins={[rehypeSlug]}>{markdownContent}</ReactMarkdown>
           </Box>
         </Grid>
-        <Grid size={{ xs: 0, md: 3 }}>
-          <Box
-            component="nav"
-            sx={{
-              backgroundColor: 'background.paper',
-              borderRadius: 1,
-              paddingY: 1,
-              position: 'sticky',
-              top: '1rem',
-            }}
-          >
-            <Scrollspy targetRef={documentRef} dataAttribute="scrollspy" offset={16}>
-              <Stack spacing={0}>
-                <Typography
-                  sx={{
-                    color: 'grey.200',
-                    fontSize: '0.875rem',
-                    fontWeight: 'bold',
-                    paddingX: 2,
-                    marginBottom: 1,
-                  }}
-                >
-                  On this page
-                </Typography>
-                {headings.map(({ id, text }) => (
-                  <AppLink
-                    key={id}
-                    to="."
-                    hash={id}
-                    hashScrollIntoView={{ behavior: 'smooth', block: 'start' }}
-                    data-scrollspy-anchor={id}
+        {!isMobile && (
+          <Grid size={{ xs: 0, md: 3 }}>
+            <Box
+              component="nav"
+              sx={{
+                backgroundColor: 'background.paper',
+                borderRadius: 1,
+                paddingY: 1,
+                position: 'sticky',
+                top: '1rem',
+              }}
+            >
+              <Scrollspy targetRef={documentRef} dataAttribute="scrollspy" offset={16}>
+                <Stack spacing={0}>
+                  <Typography
                     sx={{
-                      color: 'grey.400',
-                      display: 'block',
+                      color: 'grey.200',
                       fontSize: '0.875rem',
-                      marginX: 1,
-                      paddingX: 1,
-                      paddingY: 0.5,
-                      borderRadius: 1,
-                      transition: '0.25s',
-                      '&[data-active="true"]': {
-                        backgroundColor: 'grey.900',
-                        color: 'secondary.contrastText',
-                        fontWeight: 'bold',
-                      },
-                      '&:hover': {
-                        backgroundColor: 'secondary.dark',
-                        color: 'secondary.contrastText',
-                        textDecoration: 'none',
-                      },
+                      fontWeight: 'bold',
+                      paddingX: 2,
+                      marginBottom: 1,
                     }}
                   >
-                    {text}
-                  </AppLink>
-                ))}
-              </Stack>
-            </Scrollspy>
-          </Box>
-        </Grid>
+                    On this page
+                  </Typography>
+                  {headings.map(({ id, text }) => (
+                    <AppLink
+                      key={id}
+                      to="."
+                      hash={id}
+                      hashScrollIntoView={{ behavior: 'smooth', block: 'start' }}
+                      data-scrollspy-anchor={id}
+                      sx={{
+                        color: 'grey.400',
+                        display: 'block',
+                        fontSize: '0.875rem',
+                        marginX: 1,
+                        paddingX: 1,
+                        paddingY: 0.5,
+                        borderRadius: 1,
+                        transition: '0.25s',
+                        '&[data-active="true"]': {
+                          backgroundColor: 'grey.900',
+                          color: 'secondary.contrastText',
+                          fontWeight: 'bold',
+                        },
+                        '&:hover': {
+                          backgroundColor: 'secondary.dark',
+                          color: 'secondary.contrastText',
+                          textDecoration: 'none',
+                        },
+                      }}
+                    >
+                      {text}
+                    </AppLink>
+                  ))}
+                </Stack>
+              </Scrollspy>
+            </Box>
+          </Grid>
+        )}
       </Grid>
     </Container>
   );

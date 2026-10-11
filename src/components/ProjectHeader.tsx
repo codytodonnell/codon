@@ -33,7 +33,7 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
       <Typography component="p" color="text.secondary">
         {project.description}
       </Typography>
-      <Stack direction="row" spacing={1}>
+      <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
         <Chip label={formatDate(project.date)} variant="outlined" />
         {project.tags.map((tag) => (
           <Chip key={tag} label={tag} />
