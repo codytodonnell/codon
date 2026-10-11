@@ -1,7 +1,7 @@
 import { Box, Chip, Stack, Typography } from '@mui/material';
 import type { ProjectMetadata } from '../data/projects';
-import { PageTitle } from './PageTitle';
 import { formatDate } from '../utils';
+import { PageTitle } from '@/components/PageTitle';
 
 type ProjectHeaderProps = {
   project: ProjectMetadata;

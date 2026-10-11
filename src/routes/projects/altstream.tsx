@@ -10,5 +10,6 @@ export const Route = createFileRoute('/projects/altstream')({
 });
 
 function AltstreamProjectRoute() {
+  console.log(markdownContent);
   return <ProjectPage project={project} markdownContent={markdownContent} />;
 }
