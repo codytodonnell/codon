@@ -10,7 +10,9 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as ThankyouRouteImport } from './routes/thankyou'
 import { Route as ProjectsIndexRouteImport } from './routes/projects/index'
 import { Route as ProjectsAltstreamRouteImport } from './routes/projects/altstream'
 import { Route as ProjectsBookrRouteImport } from './routes/projects/bookr'
@@ -34,9 +36,19 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ThankyouRoute = ThankyouRouteImport.update({
+  id: '/thankyou',
+  path: '/thankyou',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProjectsIndexRoute = ProjectsIndexRouteImport.update({
@@ -128,7 +140,9 @@ const ProjectsTimothyRoute = ProjectsTimothyRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/thankyou': typeof ThankyouRoute
   '/projects/altstream': typeof ProjectsAltstreamRoute
   '/projects/bookr': typeof ProjectsBookrRoute
   '/projects/breuer': typeof ProjectsBreuerRoute
@@ -149,7 +163,9 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/thankyou': typeof ThankyouRoute
   '/projects/altstream': typeof ProjectsAltstreamRoute
   '/projects/bookr': typeof ProjectsBookrRoute
   '/projects/breuer': typeof ProjectsBreuerRoute
@@ -171,7 +187,9 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
+  '/thankyou': typeof ThankyouRoute
   '/projects/altstream': typeof ProjectsAltstreamRoute
   '/projects/bookr': typeof ProjectsBookrRoute
   '/projects/breuer': typeof ProjectsBreuerRoute
@@ -194,7 +212,9 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
     | '/contact'
+    | '/thankyou'
     | '/projects/altstream'
     | '/projects/bookr'
     | '/projects/breuer'
@@ -215,7 +235,9 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
     | '/contact'
+    | '/thankyou'
     | '/projects/altstream'
     | '/projects/bookr'
     | '/projects/breuer'
@@ -236,7 +258,9 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
     | '/contact'
+    | '/thankyou'
     | '/projects/altstream'
     | '/projects/bookr'
     | '/projects/breuer'
@@ -258,7 +282,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
+  ThankyouRoute: typeof ThankyouRoute
   ProjectsAltstreamRoute: typeof ProjectsAltstreamRoute
   ProjectsBookrRoute: typeof ProjectsBookrRoute
   ProjectsBreuerRoute: typeof ProjectsBreuerRoute
@@ -287,11 +313,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/thankyou': {
+      id: '/thankyou'
+      path: '/thankyou'
+      fullPath: '/thankyou'
+      preLoaderRoute: typeof ThankyouRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/projects/': {
@@ -418,7 +458,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
+  ThankyouRoute: ThankyouRoute,
   ProjectsAltstreamRoute: ProjectsAltstreamRoute,
   ProjectsBookrRoute: ProjectsBookrRoute,
   ProjectsBreuerRoute: ProjectsBreuerRoute,

@@ -1,5 +1,4 @@
 import { Button, Container, Link, Paper, Stack, Typography } from '@mui/material';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { createFileRoute } from '@tanstack/react-router';
 import { AppLink } from '../components/AppLink';
 import { PageTitle } from '../components/PageTitle';
@@ -19,35 +18,33 @@ function HomePage() {
             borderRadius: 2,
           }}
         >
-          <PageTitle variant="h2">codonn</PageTitle>
+          <PageTitle variant="h2">codon</PageTitle>
           <Stack spacing={1}>
-            <Typography>Welcome to codonn, I'm Cody O'Donnell.</Typography>
-            <Typography>
-              I'm a<strong> Research Software Engineer </strong>who specializes in designing and
-              building
-              <strong> data-intensive web applications </strong>.
+            <Typography sx={{ fontSize: '1.25rem' }}>
+              Welcome to codon, the personal website of Cody O'Donnell.
             </Typography>
-            <Typography>
-              I currently work at the{' '}
-              <Link href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">
-                Lawrence Berkeley National Laboratory
-              </Link>{' '}
-              in the{' '}
-              <Link
-                href="https://scidata.lbl.gov/research-areas/groups/scientific-data-management-usable-data-systems/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Usable Data Systems
-              </Link>{' '}
-              group.
+            <Typography sx={{ fontSize: '1.25rem' }}>
+              I'm a Research Software Engineer who specializes in designing and building
+              data-intensive web applications and user interfaces. I turn complex data into
+              intuitive, interactive, and visually appealing experiences, with the goal of advancing
+              scientific discovery and data access.
             </Typography>
           </Stack>
-          <AppLink to="/projects" sx={{ marginTop: 2, display: 'block' }}>
-            <Button size="large" endIcon={<ArrowForwardIcon />}>
-              Explore projects
-            </Button>
-          </AppLink>
+          <Stack direction="row" spacing={1} sx={{ marginTop: 2 }}>
+            <AppLink to="/projects" sx={{ marginTop: 2, display: 'block' }}>
+              <Button size="large">Explore projects</Button>
+            </AppLink>
+            <AppLink to="/about" sx={{ marginTop: 2, display: 'block' }}>
+              <Button variant="outlined" size="large">
+                More about me
+              </Button>
+            </AppLink>
+            <AppLink to="/contact" sx={{ marginTop: 2, display: 'block' }}>
+              <Button variant="outlined" size="large">
+                Get in touch
+              </Button>
+            </AppLink>
+          </Stack>
         </Paper>
       </Stack>
     </Container>

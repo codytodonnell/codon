@@ -8,6 +8,7 @@ export const Navbar = () => {
     () => [
       { to: '/', label: 'Home' },
       { to: '/projects', label: 'Projects' },
+      { to: '/about', label: 'About' },
       { to: '/contact', label: 'Contact' },
     ],
     [],
@@ -72,7 +73,7 @@ export const Navbar = () => {
               fontSize: '1.5rem',
             }}
           >
-            codonn
+            codon
           </AppLink>
           <Stack
             direction="row"

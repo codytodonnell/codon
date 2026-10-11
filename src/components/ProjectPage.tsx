@@ -41,15 +41,16 @@ export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
     <Container maxWidth="md">
       <Grid container spacing={3}>
         <Grid size={{ xs: 12, sm: 9 }}>
-          <Button
-            variant="text"
-            color="primary"
-            startIcon={<ArrowBackIcon />}
-            sx={{ marginBottom: 1, paddingX: 2 }}
-            href="/projects"
-          >
-            Back to projects
-          </Button>
+          <AppLink to="/projects">
+            <Button
+              variant="text"
+              color="primary"
+              startIcon={<ArrowBackIcon />}
+              sx={{ marginBottom: 1, paddingX: 2 }}
+            >
+              Back to projects
+            </Button>
+          </AppLink>
           <ProjectHeader project={project} />
           <Box
             ref={articleRef}
