@@ -77,10 +77,10 @@ export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
               borderRadius: 1,
               paddingY: 1,
               position: 'sticky',
-              top: 16,
+              top: '1rem',
             }}
           >
-            <Scrollspy targetRef={documentRef} dataAttribute="scrollspy">
+            <Scrollspy targetRef={documentRef} dataAttribute="scrollspy" offset={16}>
               <Stack spacing={0}>
                 <Typography
                   sx={{

@@ -54,7 +54,7 @@ export const theme = createTheme({
       },
       styleOverrides: {
         root: {
-          paddingTop: '6rem',
+          paddingTop: '1rem',
           paddingBottom: '6rem',
         },
       },

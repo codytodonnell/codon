@@ -1,5 +1,5 @@
 import { useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { AppBar, Box, Stack, Toolbar } from '@mui/material';
+import { AppBar, Box, Container, Stack, Toolbar } from '@mui/material';
 import { useRouterState } from '@tanstack/react-router';
 import { AppLink } from './AppLink';
 
@@ -46,65 +46,59 @@ export const Navbar = () => {
     };
   }, [activeIndex]);
 
-  const linkSx = {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingY: 0.5,
-    paddingX: 1.5,
-    borderRadius: 10,
-    textDecoration: 'none',
-    transition: 'color 0.25s ease',
-  };
-
   return (
     <AppBar
-      position="fixed"
-      sx={{ background: 'none', boxShadow: 'none', zIndex: (theme) => theme.zIndex.drawer + 1 }}
+      position="static"
+      sx={{
+        background: 'none',
+        borderBottom: '1px solid',
+        borderBottomColor: 'divider',
+        boxShadow: 'none',
+        zIndex: (theme) => theme.zIndex.drawer + 1,
+      }}
     >
-      <Toolbar component="nav" sx={{ justifyContent: 'space-between', position: 'relative' }}>
-        <AppLink
-          to="/"
-          style={{ color: 'white', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.5rem' }}
+      <Container sx={{ paddingY: 0 }}>
+        <Toolbar
+          component="nav"
+          disableGutters
+          sx={{ justifyContent: 'space-between', position: 'relative' }}
         >
-          codonn
-        </AppLink>
-        <Stack
-          direction="row"
-          spacing={1}
-          sx={{
-            margin: 1,
-            padding: 0.5,
-            borderRadius: 10,
-            borderStyle: 'solid',
-            borderWidth: 1,
-            borderColor: 'divider',
-            position: 'absolute',
-            top: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            overflow: 'hidden',
-            color: 'common.white',
-          }}
-        >
-          <Box
-            sx={{
-              position: 'absolute',
-              top: 4,
-              bottom: 4,
-              left: 0,
-              width: indicator.width,
-              transform: `translateX(${indicator.left}px)`,
-              borderRadius: 10,
-              backgroundColor: 'white',
-              transition: 'transform 0.25s ease, width 0.25s ease',
-              zIndex: -1,
+          <AppLink
+            to="/"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '1.5rem',
             }}
-          />
-          {links.map((link, index) => {
-            const isActive = index === activeIndex;
-
-            return (
+          >
+            codonn
+          </AppLink>
+          <Stack
+            direction="row"
+            spacing={1}
+            sx={{
+              margin: 1,
+              padding: 0.5,
+              position: 'relative',
+              overflow: 'hidden',
+              color: 'common.white',
+            }}
+          >
+            <Box
+              sx={{
+                position: 'absolute',
+                bottom: 4,
+                left: 0,
+                width: indicator.width,
+                height: '2px',
+                transform: `translateX(${indicator.left}px)`,
+                backgroundColor: 'white',
+                transition: 'transform 0.25s ease, width 0.25s ease',
+                zIndex: -1,
+              }}
+            />
+            {links.map((link, index) => (
               <Box
                 key={link.to}
                 ref={(el: HTMLDivElement | null) => {
@@ -114,18 +108,28 @@ export const Navbar = () => {
                 <AppLink
                   to={link.to}
                   sx={{
-                    ...linkSx,
-                    color: isActive ? 'black' : 'white',
+                    color: 'common.white',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    paddingY: 0.5,
+                    paddingX: 1.5,
+                    borderRadius: 10,
+                    textDecoration: 'none',
+                    transition: '0.25s',
+                    '&:hover': {
+                      color: 'secondary.light',
+                      textDecoration: 'none',
+                    },
                   }}
                 >
                   {link.label}
                 </AppLink>
               </Box>
-            );
-          })}
-        </Stack>
-        <Box />
-      </Toolbar>
+            ))}
+          </Stack>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };
