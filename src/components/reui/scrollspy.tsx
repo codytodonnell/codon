@@ -193,9 +193,7 @@ export function Scrollspy({
     const initialTimeout = setTimeout(() => {
       if (window.location.hash) {
         const initialHash = window.location.hash.slice(1);
-        const firstSectionId = currentAnchors?.[0]?.getAttribute(
-          `data-${dataAttribute}-anchor`,
-        );
+        const firstSectionId = currentAnchors?.[0]?.getAttribute(`data-${dataAttribute}-anchor`);
 
         if (initialHash === firstSectionId) {
           const scrollElement =

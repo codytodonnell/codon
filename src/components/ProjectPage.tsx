@@ -114,7 +114,6 @@ export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
                       key={id}
                       to="."
                       hash={id}
-                      hashScrollIntoView={{ behavior: 'smooth', block: 'start' }}
                       data-scrollspy-anchor={id}
                       sx={{
                         color: 'grey.400',
