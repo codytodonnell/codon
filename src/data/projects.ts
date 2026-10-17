@@ -19,6 +19,21 @@ export type ProjectMetadata = {
 
 export const projects: ProjectMetadata[] = [
   {
+    id: 'nmdc',
+    to: '/projects/nmdc',
+    title: 'NMDC Data Portal',
+    thumbnail: 'nmdc-thumbnail.png',
+    tags: ['Civic Data', 'UX Design', 'Data Visualization'],
+    date: 'Current',
+    description:
+      'The NMDC (National Microbiome Data Collaborative) Data Portal is a web-based platform that provides access to microbiome data and resources for researchers and the public.',
+    contributions: [],
+    coverImage: 'nmdc-cover.png',
+    productType: 'website',
+    prototypeInteractive: true,
+    differentUrl: 'https://data.microbiomedata.org',
+  },
+  {
     id: 'materials-project',
     to: '/projects/materials-project',
     title: 'The Materials Project',

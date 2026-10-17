@@ -25,6 +25,7 @@ import { Route as ProjectsMaterialsProjectRouteImport } from './routes/projects/
 import { Route as ProjectsMoesRouteImport } from './routes/projects/moes'
 import { Route as ProjectsNhcDataGuideRouteImport } from './routes/projects/nhc-data-guide'
 import { Route as ProjectsNirvfooRouteImport } from './routes/projects/nirvfoo'
+import { Route as ProjectsNmdcRouteImport } from './routes/projects/nmdc'
 import { Route as ProjectsReefgaugeRouteImport } from './routes/projects/reefgauge'
 import { Route as ProjectsReshapeRouteImport } from './routes/projects/reshape'
 import { Route as ProjectsTedxRouteImport } from './routes/projects/tedx'
@@ -112,6 +113,11 @@ const ProjectsNirvfooRoute = ProjectsNirvfooRouteImport.update({
   path: '/projects/nirvfoo',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsNmdcRoute = ProjectsNmdcRouteImport.update({
+  id: '/projects/nmdc',
+  path: '/projects/nmdc',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsReefgaugeRoute = ProjectsReefgaugeRouteImport.update({
   id: '/projects/reefgauge',
   path: '/projects/reefgauge',
@@ -154,6 +160,7 @@ export interface FileRoutesByFullPath {
   '/projects/moes': typeof ProjectsMoesRoute
   '/projects/nhc-data-guide': typeof ProjectsNhcDataGuideRoute
   '/projects/nirvfoo': typeof ProjectsNirvfooRoute
+  '/projects/nmdc': typeof ProjectsNmdcRoute
   '/projects/reefgauge': typeof ProjectsReefgaugeRoute
   '/projects/reshape': typeof ProjectsReshapeRoute
   '/projects/tedx': typeof ProjectsTedxRoute
@@ -177,6 +184,7 @@ export interface FileRoutesByTo {
   '/projects/moes': typeof ProjectsMoesRoute
   '/projects/nhc-data-guide': typeof ProjectsNhcDataGuideRoute
   '/projects/nirvfoo': typeof ProjectsNirvfooRoute
+  '/projects/nmdc': typeof ProjectsNmdcRoute
   '/projects/reefgauge': typeof ProjectsReefgaugeRoute
   '/projects/reshape': typeof ProjectsReshapeRoute
   '/projects/tedx': typeof ProjectsTedxRoute
@@ -201,6 +209,7 @@ export interface FileRoutesById {
   '/projects/moes': typeof ProjectsMoesRoute
   '/projects/nhc-data-guide': typeof ProjectsNhcDataGuideRoute
   '/projects/nirvfoo': typeof ProjectsNirvfooRoute
+  '/projects/nmdc': typeof ProjectsNmdcRoute
   '/projects/reefgauge': typeof ProjectsReefgaugeRoute
   '/projects/reshape': typeof ProjectsReshapeRoute
   '/projects/tedx': typeof ProjectsTedxRoute
@@ -226,6 +235,7 @@ export interface FileRouteTypes {
     | '/projects/moes'
     | '/projects/nhc-data-guide'
     | '/projects/nirvfoo'
+    | '/projects/nmdc'
     | '/projects/reefgauge'
     | '/projects/reshape'
     | '/projects/tedx'
@@ -249,6 +259,7 @@ export interface FileRouteTypes {
     | '/projects/moes'
     | '/projects/nhc-data-guide'
     | '/projects/nirvfoo'
+    | '/projects/nmdc'
     | '/projects/reefgauge'
     | '/projects/reshape'
     | '/projects/tedx'
@@ -272,6 +283,7 @@ export interface FileRouteTypes {
     | '/projects/moes'
     | '/projects/nhc-data-guide'
     | '/projects/nirvfoo'
+    | '/projects/nmdc'
     | '/projects/reefgauge'
     | '/projects/reshape'
     | '/projects/tedx'
@@ -296,6 +308,7 @@ export interface RootRouteChildren {
   ProjectsMoesRoute: typeof ProjectsMoesRoute
   ProjectsNhcDataGuideRoute: typeof ProjectsNhcDataGuideRoute
   ProjectsNirvfooRoute: typeof ProjectsNirvfooRoute
+  ProjectsNmdcRoute: typeof ProjectsNmdcRoute
   ProjectsReefgaugeRoute: typeof ProjectsReefgaugeRoute
   ProjectsReshapeRoute: typeof ProjectsReshapeRoute
   ProjectsTedxRoute: typeof ProjectsTedxRoute
@@ -418,6 +431,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsNirvfooRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/nmdc': {
+      id: '/projects/nmdc'
+      path: '/projects/nmdc'
+      fullPath: '/projects/nmdc'
+      preLoaderRoute: typeof ProjectsNmdcRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/reefgauge': {
       id: '/projects/reefgauge'
       path: '/projects/reefgauge'
@@ -472,6 +492,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsMoesRoute: ProjectsMoesRoute,
   ProjectsNhcDataGuideRoute: ProjectsNhcDataGuideRoute,
   ProjectsNirvfooRoute: ProjectsNirvfooRoute,
+  ProjectsNmdcRoute: ProjectsNmdcRoute,
   ProjectsReefgaugeRoute: ProjectsReefgaugeRoute,
   ProjectsReshapeRoute: ProjectsReshapeRoute,
   ProjectsTedxRoute: ProjectsTedxRoute,

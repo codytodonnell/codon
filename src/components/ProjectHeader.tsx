@@ -1,4 +1,5 @@
-import { Box, Chip, Stack, Typography } from '@mui/material';
+import { Box, Button, Chip, Stack, Typography } from '@mui/material';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import type { ProjectMetadata } from '../data/projects';
 import { formatDate } from '../utils';
 import { PageTitle } from '@/components/PageTitle';
@@ -33,7 +34,19 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
       <Typography component="p" color="text.secondary">
         {project.description}
       </Typography>
-      <Stack direction="row" sx={{ flexWrap: 'wrap', gap: 1 }}>
+      <Stack direction="row" sx={{ alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
+        {project.differentUrl && (
+          <Button
+            variant="contained"
+            size="small"
+            href={project.differentUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            endIcon={<OpenInNewIcon />}
+          >
+            Go to {project.productType}
+          </Button>
+        )}
         <Chip label={formatDate(project.date)} variant="outlined" />
         {project.tags.map((tag) => (
           <Chip key={tag} label={tag} />
