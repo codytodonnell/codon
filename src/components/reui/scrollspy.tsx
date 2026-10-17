@@ -13,6 +13,9 @@ type ScrollspyProps = {
   throttleTime?: number;
 };
 
+/**
+ * Reference: https://reui.io/docs/components/base/scrollspy
+ */
 export function Scrollspy({
   children,
   targetRef,
