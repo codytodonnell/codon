@@ -28,6 +28,7 @@ import { Route as ProjectsNirvfooRouteImport } from './routes/projects/nirvfoo'
 import { Route as ProjectsNmdcRouteImport } from './routes/projects/nmdc'
 import { Route as ProjectsReefgaugeRouteImport } from './routes/projects/reefgauge'
 import { Route as ProjectsReshapeRouteImport } from './routes/projects/reshape'
+import { Route as ProjectsStrudelRouteImport } from './routes/projects/strudel'
 import { Route as ProjectsTedxRouteImport } from './routes/projects/tedx'
 import { Route as ProjectsTestRouteImport } from './routes/projects/test'
 import { Route as ProjectsTimothyRouteImport } from './routes/projects/timothy'
@@ -128,6 +129,11 @@ const ProjectsReshapeRoute = ProjectsReshapeRouteImport.update({
   path: '/projects/reshape',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjectsStrudelRoute = ProjectsStrudelRouteImport.update({
+  id: '/projects/strudel',
+  path: '/projects/strudel',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ProjectsTedxRoute = ProjectsTedxRouteImport.update({
   id: '/projects/tedx',
   path: '/projects/tedx',
@@ -163,6 +169,7 @@ export interface FileRoutesByFullPath {
   '/projects/nmdc': typeof ProjectsNmdcRoute
   '/projects/reefgauge': typeof ProjectsReefgaugeRoute
   '/projects/reshape': typeof ProjectsReshapeRoute
+  '/projects/strudel': typeof ProjectsStrudelRoute
   '/projects/tedx': typeof ProjectsTedxRoute
   '/projects/test': typeof ProjectsTestRoute
   '/projects/timothy': typeof ProjectsTimothyRoute
@@ -187,6 +194,7 @@ export interface FileRoutesByTo {
   '/projects/nmdc': typeof ProjectsNmdcRoute
   '/projects/reefgauge': typeof ProjectsReefgaugeRoute
   '/projects/reshape': typeof ProjectsReshapeRoute
+  '/projects/strudel': typeof ProjectsStrudelRoute
   '/projects/tedx': typeof ProjectsTedxRoute
   '/projects/test': typeof ProjectsTestRoute
   '/projects/timothy': typeof ProjectsTimothyRoute
@@ -212,6 +220,7 @@ export interface FileRoutesById {
   '/projects/nmdc': typeof ProjectsNmdcRoute
   '/projects/reefgauge': typeof ProjectsReefgaugeRoute
   '/projects/reshape': typeof ProjectsReshapeRoute
+  '/projects/strudel': typeof ProjectsStrudelRoute
   '/projects/tedx': typeof ProjectsTedxRoute
   '/projects/test': typeof ProjectsTestRoute
   '/projects/timothy': typeof ProjectsTimothyRoute
@@ -238,6 +247,7 @@ export interface FileRouteTypes {
     | '/projects/nmdc'
     | '/projects/reefgauge'
     | '/projects/reshape'
+    | '/projects/strudel'
     | '/projects/tedx'
     | '/projects/test'
     | '/projects/timothy'
@@ -262,6 +272,7 @@ export interface FileRouteTypes {
     | '/projects/nmdc'
     | '/projects/reefgauge'
     | '/projects/reshape'
+    | '/projects/strudel'
     | '/projects/tedx'
     | '/projects/test'
     | '/projects/timothy'
@@ -286,6 +297,7 @@ export interface FileRouteTypes {
     | '/projects/nmdc'
     | '/projects/reefgauge'
     | '/projects/reshape'
+    | '/projects/strudel'
     | '/projects/tedx'
     | '/projects/test'
     | '/projects/timothy'
@@ -311,6 +323,7 @@ export interface RootRouteChildren {
   ProjectsNmdcRoute: typeof ProjectsNmdcRoute
   ProjectsReefgaugeRoute: typeof ProjectsReefgaugeRoute
   ProjectsReshapeRoute: typeof ProjectsReshapeRoute
+  ProjectsStrudelRoute: typeof ProjectsStrudelRoute
   ProjectsTedxRoute: typeof ProjectsTedxRoute
   ProjectsTestRoute: typeof ProjectsTestRoute
   ProjectsTimothyRoute: typeof ProjectsTimothyRoute
@@ -452,6 +465,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsReshapeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projects/strudel': {
+      id: '/projects/strudel'
+      path: '/projects/strudel'
+      fullPath: '/projects/strudel'
+      preLoaderRoute: typeof ProjectsStrudelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/projects/tedx': {
       id: '/projects/tedx'
       path: '/projects/tedx'
@@ -495,6 +515,7 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsNmdcRoute: ProjectsNmdcRoute,
   ProjectsReefgaugeRoute: ProjectsReefgaugeRoute,
   ProjectsReshapeRoute: ProjectsReshapeRoute,
+  ProjectsStrudelRoute: ProjectsStrudelRoute,
   ProjectsTedxRoute: ProjectsTedxRoute,
   ProjectsTestRoute: ProjectsTestRoute,
   ProjectsTimothyRoute: ProjectsTimothyRoute,

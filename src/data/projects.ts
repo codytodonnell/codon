@@ -34,6 +34,21 @@ export const projects: ProjectMetadata[] = [
     differentUrl: 'https://data.microbiomedata.org',
   },
   {
+    id: 'strudel',
+    to: '/projects/strudel',
+    title: 'STRUDEL',
+    thumbnail: 'strudel-thumbnail.png',
+    tags: ['UX Design'],
+    date: '2/28/2026',
+    description:
+      'An open-source ecosystem for creating user-centered software for scientific communities.',
+    contributions: [],
+    coverImage: 'strudel-cover.png',
+    productType: 'website',
+    prototypeInteractive: true,
+    differentUrl: 'https://strudel.science',
+  },
+  {
     id: 'materials-project',
     to: '/projects/materials-project',
     title: 'The Materials Project',
