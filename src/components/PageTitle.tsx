@@ -5,7 +5,7 @@ export const PageTitle: React.FC<TypographyProps> = ({ children, sx, ...props })
     <Typography
       variant="h3"
       component="h1"
-      sx={{ color: 'secondary.light', fontWeight: 'bold', ...sx }}
+      sx={{ color: 'secondary.light', fontWeight: 'bold', marginBottom: 2, ...sx }}
       {...props}
     >
       {children}

@@ -1,6 +1,8 @@
+import { MarkdownArticle } from '@/components/MarkdownContainer';
 import { PageTitle } from '@/components/PageTitle';
-import { Container, Link, Typography } from '@mui/material';
+import { Box, Container, Grid } from '@mui/material';
 import { createFileRoute } from '@tanstack/react-router';
+import markdownContent from '../markdown/about-me.md?raw';
 
 export const Route = createFileRoute('/about')({
   component: AboutPage,
@@ -10,21 +12,25 @@ function AboutPage() {
   return (
     <Container>
       <PageTitle>About</PageTitle>
-      <Typography sx={{ fontSize: '1.25rem', marginTop: 2 }}>
-        I currently work at the{' '}
-        <Link href="https://www.lbl.gov/" target="_blank" rel="noopener noreferrer">
-          Lawrence Berkeley National Laboratory
-        </Link>{' '}
-        in the{' '}
-        <Link
-          href="https://scidata.lbl.gov/research-areas/groups/scientific-data-management-usable-data-systems/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Usable Data Systems
-        </Link>{' '}
-        group.
-      </Typography>
+      <Grid container spacing={2}>
+        <Grid size={{ xs: 12, sm: 8 }}>
+          <MarkdownArticle markdownContent={markdownContent} />
+        </Grid>
+        <Grid size={{ xs: 12, sm: 4 }}>
+          <Box
+            component="img"
+            src="/images/me.jpg"
+            alt="Photo of Cody O'Donnell"
+            sx={{
+              maxWidth: '200px',
+              borderRadius: 2,
+              objectFit: 'cover',
+              border: '1px solid',
+              borderColor: 'divider',
+            }}
+          />
+        </Grid>
+      </Grid>
     </Container>
   );
 }

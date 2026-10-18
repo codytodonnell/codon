@@ -1,0 +1,5 @@
+Hi visitor, my name is Cody O'Donnell. I'm a Research Software Engineer currently working in the [Scientific Data Management & Usable Data Systems Group](https://scidata.lbl.gov/research-areas/groups/scientific-data-management-usable-data-systems/) at the [Lawrence Berkeley National Laboratory](https://lbl.gov). I specialize in building effective user experiences and user interfaces for scientific software applications.
+
+The bulk of my work centers around complex data navigation, search and discovery, data visualization, and user-centered design. I'm passionate about the impact that User Experience can have on scientific discovery, learning, and critical decision-making. I strive to make products that make data easier to access, easier to understand, more usable, and more pleasant.
+
+I have over 10 years of experience building data-intensive web applications for the research community. I earned my M.S. in Human-Computer Interaction from Georgia Tech and my B.S. in Information Management & Technology from Syracuse University.

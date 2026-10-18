@@ -1,3 +1,7 @@
+import { AppLink } from '@/components/AppLink';
+import { MarkdownArticle } from '@/components/MarkdownContainer';
+import { Scrollspy } from '@/components/reui/scrollspy';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import {
   Box,
   Button,
@@ -8,15 +12,10 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ReactMarkdown from 'react-markdown';
-import rehypeSlug from 'rehype-slug';
-import { ProjectHeader } from './ProjectHeader';
-import type { ProjectMetadata } from '../data/projects';
-import { Scrollspy } from '@/components/reui/scrollspy';
-import { useMemo, useRef } from 'react';
 import GithubSlugger from 'github-slugger';
-import { AppLink } from '@/components/AppLink';
+import { useMemo, useRef } from 'react';
+import type { ProjectMetadata } from '../data/projects';
+import { ProjectHeader } from './ProjectHeader';
 
 type ProjectPageProps = {
   project: ProjectMetadata;
@@ -64,25 +63,7 @@ export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
             </Button>
           </AppLink>
           <ProjectHeader project={project} />
-          <Box
-            ref={articleRef}
-            component="article"
-            sx={{
-              '& h2': {
-                fontSize: '1.5rem',
-                fontWeight: 'bold',
-                marginTop: 4,
-                marginBottom: 1,
-              },
-              '& p': {
-                marginTop: 0,
-                marginBottom: 2,
-                lineHeight: 1.8,
-              },
-            }}
-          >
-            <ReactMarkdown rehypePlugins={[rehypeSlug]}>{markdownContent}</ReactMarkdown>
-          </Box>
+          <MarkdownArticle markdownContent={markdownContent} />
         </Grid>
         {!isMobile && (
           <Grid size={{ xs: 0, md: 3 }}>

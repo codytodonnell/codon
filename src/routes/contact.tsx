@@ -33,7 +33,7 @@ function ContactPage() {
   return (
     <Container>
       <PageTitle>Contact</PageTitle>
-      <Stack direction="row" spacing={1} sx={{ marginTop: 2 }}>
+      <Stack direction="row" spacing={1}>
         <Button
           variant="outlined"
           color="primary"
