@@ -1,8 +1,8 @@
-import { Box, Button, Chip, Stack, Typography } from '@mui/material';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-import type { ProjectMetadata } from '../data/projects';
-import { formatDate } from '../utils';
 import { PageTitle } from '@/components/PageTitle';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { Box, Button, Chip, Stack, Typography } from '@mui/material';
+import type { ProjectMetadata } from '../data/projects';
+import { formatDateRange } from '../utils';
 
 type ProjectHeaderProps = {
   project: ProjectMetadata;
@@ -47,7 +47,7 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
             Go to {project.productType}
           </Button>
         )}
-        <Chip label={formatDate(project.date)} variant="outlined" />
+        <Chip label={formatDateRange(project.startDate, project.endDate)} variant="outlined" />
         {project.tags.map((tag) => (
           <Chip key={tag} label={tag} />
         ))}

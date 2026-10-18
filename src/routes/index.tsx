@@ -15,6 +15,7 @@ import { AppLink } from '../components/AppLink';
 import { PageTitle } from '../components/PageTitle';
 import { ProjectItem } from '@/components/ProjectItem';
 import { projects } from '@/data/projects';
+import { sortProjectsByDate } from '@/utils';
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -23,9 +24,7 @@ export const Route = createFileRoute('/')({
 function HomePage() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const sortedProjects = [...projects].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
+  const sortedProjects = [...projects].sort(sortProjectsByDate);
   const featuredProjects = sortedProjects.slice(0, 2);
 
   return (

@@ -1,3 +1,4 @@
+import { formatDateRange } from '@/utils';
 import { Box, Paper, Stack, Typography } from '@mui/material';
 import type { ProjectMetadata } from '../data/projects';
 import { AppLink } from './AppLink';
@@ -46,7 +47,7 @@ export function ProjectItem({ project }: ProjectItemProps) {
             {project.title}
           </Typography>
           <Typography variant="body2" color="textSecondary">
-            {project.date}
+            {formatDateRange(project.startDate, project.endDate)}
           </Typography>
         </Stack>
       </Paper>

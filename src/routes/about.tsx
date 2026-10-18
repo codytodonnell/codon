@@ -19,7 +19,7 @@ function AboutPage() {
         <Grid size={{ xs: 12, sm: 4 }}>
           <Box
             component="img"
-            src="/images/me.jpg"
+            src="/images/me.png"
             alt="Photo of Cody O'Donnell"
             sx={{
               maxWidth: '200px',

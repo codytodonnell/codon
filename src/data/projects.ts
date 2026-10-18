@@ -5,7 +5,8 @@ export type ProjectMetadata = {
   shortTitle?: string;
   thumbnail: string;
   tags: string[];
-  date: string;
+  startDate: string;
+  endDate?: string | null;
   description: string;
   contributions: string[];
   coverImage: string;
@@ -24,7 +25,8 @@ export const projects: ProjectMetadata[] = [
     title: 'NMDC Data Portal',
     thumbnail: 'nmdc-thumbnail.png',
     tags: ['Civic Data', 'UX Design', 'Data Visualization'],
-    date: 'Current',
+    startDate: '8/1/2025',
+    endDate: null,
     description:
       'The NMDC (National Microbiome Data Collaborative) Data Portal is a web-based platform that provides access to microbiome data and resources for researchers and the public.',
     contributions: [],
@@ -39,7 +41,8 @@ export const projects: ProjectMetadata[] = [
     title: 'STRUDEL',
     thumbnail: 'strudel-thumbnail.png',
     tags: ['UX Design'],
-    date: '2/28/2026',
+    startDate: '7/13/2023',
+    endDate: '2/28/2026',
     description:
       'An open-source ecosystem for creating user-centered software for scientific communities.',
     contributions: [],
@@ -54,7 +57,8 @@ export const projects: ProjectMetadata[] = [
     title: 'The Materials Project',
     thumbnail: 'materials-project-cover.png',
     tags: ['Civic Data', 'UX Design', 'Data Visualization'],
-    date: '6/3/2022',
+    startDate: '8/1/2020',
+    endDate: '6/3/2022',
     description:
       'A materials science data platform with computed information on known and predicted materials as well as powerful analysis tools to inspire and design novel materials.',
     contributions: [],
@@ -69,7 +73,8 @@ export const projects: ProjectMetadata[] = [
     title: 'The Alt Stream',
     thumbnail: 'altstream-thumbnail.png',
     tags: ['Data Visualization', 'D3'],
-    date: '5/1/2016',
+    startDate: '1/1/2016',
+    endDate: '5/1/2016',
     description:
       'An exploratory visualization tool that examines the bands and sounds from the 90s Alternative Rock Movement.',
     contributions: [],
@@ -83,7 +88,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Marcel Breuer Constituents Network',
     thumbnail: 'breuer-thumbnail.png',
     tags: ['Data Visualization', 'Civic Data', 'D3'],
-    date: '8/1/2014',
+    startDate: '6/1/2014',
+    endDate: '8/1/2014',
     description:
       'An interactive network visualization of all the people represented in the Marcel Breuer Digital Archive.',
     contributions: [],
@@ -97,7 +103,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Alternative Rock Durations',
     thumbnail: 'durations-thumbnail.png',
     tags: ['Data Visualization', 'R'],
-    date: '11/1/2015',
+    startDate: '10/1/2015',
+    endDate: '11/1/2015',
     description:
       'A visualization of the song durations for each song by five of the most influential bands from the Alternative Rock Movement.',
     contributions: [],
@@ -112,7 +119,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Elemental',
     thumbnail: 'elemental-thumbnail.png',
     tags: ['Data Visualization', 'Education Technology', 'D3'],
-    date: '5/1/2014',
+    startDate: '1/1/2014',
+    endDate: '5/1/2014',
     description:
       'An experimental learning tool for understanding the elements from the Periodic Table.',
     contributions: [],
@@ -126,7 +134,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Exoplanets Interactive Catalog',
     thumbnail: 'exoplanets-thumb.png',
     tags: ['Data Visualization', 'Education Technology', 'D3'],
-    date: '6/1/2016',
+    startDate: '1/1/2016',
+    endDate: '6/1/2016',
     description:
       'A web-based visualization tool for exploring over 2,000 known exoplanets and their stars.',
     contributions: [],
@@ -140,7 +149,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Nirvana vs. Foo Fighters',
     thumbnail: 'nirvfoo-thumbnail.png',
     tags: ['Data Visualization', 'R'],
-    date: '5/1/2016',
+    startDate: '3/1/2016',
+    endDate: '5/1/2016',
     description:
       'A collection of data visualizations comparing the careers of two popular alternative rock bands: Nirvana and Foo Fighters.',
     contributions: [],
@@ -156,7 +166,8 @@ export const projects: ProjectMetadata[] = [
     shortTitle: 'Taking the Next Step',
     thumbnail: 'tedx-thumbnail.png',
     tags: ['Data Visualization', 'D3'],
-    date: '4/1/2016',
+    startDate: '3/1/2016',
+    endDate: '4/1/2016',
     description:
       'An interactive tool for guests of TEDxSyracuseUniversity to learn more about the speakers they just saw.',
     contributions: [],
@@ -170,7 +181,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Bookr',
     thumbnail: 'bookr-thumbnail.png',
     tags: ['UX Design', 'UX Research'],
-    date: '12/1/2018',
+    startDate: '9/1/2018',
+    endDate: '12/1/2018',
     description: 'An evidence-based solution to help musicians book gigs.',
     contributions: [],
     coverImage: 'bookr-cover.png',
@@ -184,7 +196,8 @@ export const projects: ProjectMetadata[] = [
     title: "Moe's Voice",
     thumbnail: 'moes-thumbnail.png',
     tags: ['UX Design', 'UX Research'],
-    date: '12/1/2018',
+    startDate: '9/1/2018',
+    endDate: '12/1/2018',
     description:
       'A user-centered research project to design voice interaction technology for Moe’s Southwest Grill.',
     contributions: [],
@@ -199,7 +212,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Timothy the Turtle',
     thumbnail: 'timothy-thumbnail.png',
     tags: ['Education Technology', 'UX Design', 'UX Research'],
-    date: '12/1/2018',
+    startDate: '10/1/2018',
+    endDate: '12/1/2018',
     description:
       'An educational web tool for teaching young children about turtles and tortoises through an interactive narrative.',
     contributions: [],
@@ -213,7 +227,8 @@ export const projects: ProjectMetadata[] = [
     title: 'ReShapeWeb',
     thumbnail: 'reshape-thumbnail.png',
     tags: ['Data Visualization', 'Education Technology', 'UX Research', 'Civic Data', 'D3'],
-    date: '1/1/2020',
+    startDate: '9/1/2019',
+    endDate: '1/1/2020',
     description:
       'A web-based visualization tool built for students to critically analyze their movement, their relation to their city, and their relation to their data.',
     contributions: [],
@@ -227,7 +242,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Map Room Teaching Toolkit',
     thumbnail: 'maproom-context.jpg',
     tags: ['Education Technology', 'UX Design', 'Civic Data'],
-    date: '12/1/2019',
+    startDate: '10/15/2019',
+    endDate: '12/1/2019',
     description:
       'A collaborative mapping classroom activity designed to raise students’ awareness of the importance of equitable information dissemination during natural disasters.',
     contributions: [],
@@ -243,7 +259,8 @@ export const projects: ProjectMetadata[] = [
     title: 'Civic Data Guide: NHC Data Archive',
     thumbnail: 'nhc-data-guide-thumb.png',
     tags: ['Civic Data'],
-    date: '12/1/2019',
+    startDate: '11/1/2019',
+    endDate: '12/1/2019',
     description:
       'A succinct and digestible guide to understanding the National Hurricane Center’s archive of Tropical Cyclone Reports.',
     contributions: [],
@@ -258,7 +275,8 @@ export const projects: ProjectMetadata[] = [
     title: 'ReefGauge',
     thumbnail: 'rg-thumb.png',
     tags: ['Data Visualization', 'Education Technology', 'UX Design', 'UX Research'],
-    date: '3/1/2020',
+    startDate: '8/1/2019',
+    endDate: '5/1/2020',
     description:
       'A coral reef learning and data visualization tool designed for the scuba community.',
     contributions: [],

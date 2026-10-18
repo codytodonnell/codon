@@ -3,15 +3,14 @@ import { createFileRoute } from '@tanstack/react-router';
 import { ProjectItem } from '../../components/ProjectItem';
 import { projects } from '../../data/projects';
 import { PageTitle } from '../../components/PageTitle';
+import { sortProjectsByDate } from '@/utils';
 
 export const Route = createFileRoute('/projects/')({
   component: ProjectsListPage,
 });
 
 function ProjectsListPage() {
-  const sortedProjects = [...projects].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
+  const sortedProjects = [...projects].sort(sortProjectsByDate);
 
   return (
     <Container>
