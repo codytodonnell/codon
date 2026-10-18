@@ -15,7 +15,6 @@ import { AppLink } from '../components/AppLink';
 import { PageTitle } from '../components/PageTitle';
 import { ProjectItem } from '@/components/ProjectItem';
 import { projects } from '@/data/projects';
-import App from '@/App';
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -31,7 +30,7 @@ function HomePage() {
 
   return (
     <Container sx={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <Stack spacing={2} sx={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Stack spacing={2} sx={{ flex: 1 }}>
         <Paper
           sx={{
             padding: { xs: 2, sm: 4 },
@@ -88,6 +87,9 @@ function HomePage() {
             </Stack>
           )}
         </Paper>
+        <Typography variant="h6" component="h2">
+          Featured Projects
+        </Typography>
         <Grid container spacing={2} sx={{ width: '100%' }}>
           {featuredProjects.map((project) => (
             <Grid size={{ xs: 12, sm: 4 }} key={project.to}>
