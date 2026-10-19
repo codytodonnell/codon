@@ -24,7 +24,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/nmdc',
     title: 'NMDC Data Portal',
     thumbnail: 'nmdc-thumbnail.png',
-    tags: ['Civic Data', 'UX Design', 'Data Visualization'],
+    tags: ['Search & Discovery', 'UX Design', 'Data Visualization'],
     startDate: '8/1/2025',
     endDate: null,
     description:
@@ -56,7 +56,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/materials-project',
     title: 'The Materials Project',
     thumbnail: 'materials-project-cover.png',
-    tags: ['Civic Data', 'UX Design', 'Data Visualization'],
+    tags: ['Search & Discovery', 'UX Design', 'Data Visualization'],
     startDate: '8/1/2020',
     endDate: '6/3/2022',
     description:
@@ -72,7 +72,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/altstream',
     title: 'The Alt Stream',
     thumbnail: 'altstream-thumbnail.png',
-    tags: ['Data Visualization', 'D3'],
+    tags: ['Data Visualization'],
     startDate: '1/1/2016',
     endDate: '5/1/2016',
     description:
@@ -87,7 +87,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/breuer',
     title: 'Marcel Breuer Constituents Network',
     thumbnail: 'breuer-thumbnail.png',
-    tags: ['Data Visualization', 'Civic Data', 'D3'],
+    tags: ['Data Visualization', 'Civic Data'],
     startDate: '6/1/2014',
     endDate: '8/1/2014',
     description:
@@ -102,7 +102,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/durations',
     title: 'Alternative Rock Durations',
     thumbnail: 'durations-thumbnail.png',
-    tags: ['Data Visualization', 'R'],
+    tags: ['Data Visualization'],
     startDate: '10/1/2015',
     endDate: '11/1/2015',
     description:
@@ -118,7 +118,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/elemental',
     title: 'Elemental',
     thumbnail: 'elemental-thumbnail.png',
-    tags: ['Data Visualization', 'Education Technology', 'D3'],
+    tags: ['Data Visualization', 'Education Technology'],
     startDate: '1/1/2014',
     endDate: '5/1/2014',
     description:
@@ -133,7 +133,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/exoplanets',
     title: 'Exoplanets Interactive Catalog',
     thumbnail: 'exoplanets-thumb.png',
-    tags: ['Data Visualization', 'Education Technology', 'D3'],
+    tags: ['Data Visualization', 'Education Technology'],
     startDate: '1/1/2016',
     endDate: '6/1/2016',
     description:
@@ -148,7 +148,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/nirvfoo',
     title: 'Nirvana vs. Foo Fighters',
     thumbnail: 'nirvfoo-thumbnail.png',
-    tags: ['Data Visualization', 'R'],
+    tags: ['Data Visualization'],
     startDate: '3/1/2016',
     endDate: '5/1/2016',
     description:
@@ -165,7 +165,7 @@ export const projects: ProjectMetadata[] = [
     title: 'Taking the Next Step: TEDxSyracuseUniversity',
     shortTitle: 'Taking the Next Step',
     thumbnail: 'tedx-thumbnail.png',
-    tags: ['Data Visualization', 'D3'],
+    tags: ['Data Visualization'],
     startDate: '3/1/2016',
     endDate: '4/1/2016',
     description:
@@ -226,7 +226,7 @@ export const projects: ProjectMetadata[] = [
     to: '/projects/reshape',
     title: 'ReShapeWeb',
     thumbnail: 'reshape-thumbnail.png',
-    tags: ['Data Visualization', 'Education Technology', 'UX Research', 'Civic Data', 'D3'],
+    tags: ['Data Visualization', 'Education Technology', 'UX Research', 'Civic Data'],
     startDate: '9/1/2019',
     endDate: '1/1/2020',
     description:

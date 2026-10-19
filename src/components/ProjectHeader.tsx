@@ -35,6 +35,7 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
         {project.description}
       </Typography>
       <Stack direction="row" sx={{ alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
+        <Chip label={formatDateRange(project.startDate, project.endDate)} variant="outlined" />
         {project.differentUrl && (
           <Button
             variant="contained"
@@ -47,7 +48,8 @@ export function ProjectHeader({ project }: ProjectHeaderProps) {
             Go to {project.productType}
           </Button>
         )}
-        <Chip label={formatDateRange(project.startDate, project.endDate)} variant="outlined" />
+      </Stack>
+      <Stack direction="row" sx={{ alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
         {project.tags.map((tag) => (
           <Chip key={tag} label={tag} />
         ))}
