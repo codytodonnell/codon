@@ -30,7 +30,6 @@ import { Route as ProjectsReefgaugeRouteImport } from './routes/projects/reefgau
 import { Route as ProjectsReshapeRouteImport } from './routes/projects/reshape'
 import { Route as ProjectsStrudelRouteImport } from './routes/projects/strudel'
 import { Route as ProjectsTedxRouteImport } from './routes/projects/tedx'
-import { Route as ProjectsTestRouteImport } from './routes/projects/test'
 import { Route as ProjectsTimothyRouteImport } from './routes/projects/timothy'
 
 const IndexRoute = IndexRouteImport.update({
@@ -139,11 +138,6 @@ const ProjectsTedxRoute = ProjectsTedxRouteImport.update({
   path: '/projects/tedx',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProjectsTestRoute = ProjectsTestRouteImport.update({
-  id: '/projects/test',
-  path: '/projects/test',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const ProjectsTimothyRoute = ProjectsTimothyRouteImport.update({
   id: '/projects/timothy',
   path: '/projects/timothy',
@@ -171,7 +165,6 @@ export interface FileRoutesByFullPath {
   '/projects/reshape': typeof ProjectsReshapeRoute
   '/projects/strudel': typeof ProjectsStrudelRoute
   '/projects/tedx': typeof ProjectsTedxRoute
-  '/projects/test': typeof ProjectsTestRoute
   '/projects/timothy': typeof ProjectsTimothyRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -196,7 +189,6 @@ export interface FileRoutesByTo {
   '/projects/reshape': typeof ProjectsReshapeRoute
   '/projects/strudel': typeof ProjectsStrudelRoute
   '/projects/tedx': typeof ProjectsTedxRoute
-  '/projects/test': typeof ProjectsTestRoute
   '/projects/timothy': typeof ProjectsTimothyRoute
   '/projects': typeof ProjectsIndexRoute
 }
@@ -222,7 +214,6 @@ export interface FileRoutesById {
   '/projects/reshape': typeof ProjectsReshapeRoute
   '/projects/strudel': typeof ProjectsStrudelRoute
   '/projects/tedx': typeof ProjectsTedxRoute
-  '/projects/test': typeof ProjectsTestRoute
   '/projects/timothy': typeof ProjectsTimothyRoute
   '/projects/': typeof ProjectsIndexRoute
 }
@@ -249,7 +240,6 @@ export interface FileRouteTypes {
     | '/projects/reshape'
     | '/projects/strudel'
     | '/projects/tedx'
-    | '/projects/test'
     | '/projects/timothy'
     | '/projects/'
   fileRoutesByTo: FileRoutesByTo
@@ -274,7 +264,6 @@ export interface FileRouteTypes {
     | '/projects/reshape'
     | '/projects/strudel'
     | '/projects/tedx'
-    | '/projects/test'
     | '/projects/timothy'
     | '/projects'
   id:
@@ -299,7 +288,6 @@ export interface FileRouteTypes {
     | '/projects/reshape'
     | '/projects/strudel'
     | '/projects/tedx'
-    | '/projects/test'
     | '/projects/timothy'
     | '/projects/'
   fileRoutesById: FileRoutesById
@@ -325,7 +313,6 @@ export interface RootRouteChildren {
   ProjectsReshapeRoute: typeof ProjectsReshapeRoute
   ProjectsStrudelRoute: typeof ProjectsStrudelRoute
   ProjectsTedxRoute: typeof ProjectsTedxRoute
-  ProjectsTestRoute: typeof ProjectsTestRoute
   ProjectsTimothyRoute: typeof ProjectsTimothyRoute
   ProjectsIndexRoute: typeof ProjectsIndexRoute
 }
@@ -479,13 +466,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProjectsTedxRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/projects/test': {
-      id: '/projects/test'
-      path: '/projects/test'
-      fullPath: '/projects/test'
-      preLoaderRoute: typeof ProjectsTestRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/projects/timothy': {
       id: '/projects/timothy'
       path: '/projects/timothy'
@@ -517,7 +497,6 @@ const rootRouteChildren: RootRouteChildren = {
   ProjectsReshapeRoute: ProjectsReshapeRoute,
   ProjectsStrudelRoute: ProjectsStrudelRoute,
   ProjectsTedxRoute: ProjectsTedxRoute,
-  ProjectsTestRoute: ProjectsTestRoute,
   ProjectsTimothyRoute: ProjectsTimothyRoute,
   ProjectsIndexRoute: ProjectsIndexRoute,
 }

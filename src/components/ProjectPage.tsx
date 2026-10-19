@@ -13,7 +13,7 @@ import {
   useTheme,
 } from '@mui/material';
 import GithubSlugger from 'github-slugger';
-import { useMemo, useRef } from 'react';
+import { useMemo } from 'react';
 import type { ProjectMetadata } from '../data/projects';
 import { ProjectHeader } from './ProjectHeader';
 
@@ -43,7 +43,6 @@ const getHeadings = (markdown: string) => {
 };
 
 export const ProjectPage = ({ project, markdownContent }: ProjectPageProps) => {
-  const articleRef = useRef<HTMLElement | null>(null);
   const headings = useMemo(() => getHeadings(markdownContent), [markdownContent]);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
