@@ -13,16 +13,16 @@ function AboutPage() {
     <Container>
       <PageTitle>About</PageTitle>
       <Grid container spacing={2}>
-        <Grid size={{ xs: 12, sm: 8 }}>
+        <Grid size={{ xs: 12, md: 8 }}>
           <MarkdownArticle markdownContent={markdownContent} />
         </Grid>
-        <Grid size={{ xs: 12, sm: 4 }}>
+        <Grid size={{ xs: 12, md: 4 }}>
           <Box
             component="img"
-            src="/images/me.png"
+            src="/images/me.jpg"
             alt="Photo of Cody O'Donnell"
             sx={{
-              maxWidth: '200px',
+              maxWidth: '273px',
               borderRadius: 2,
               objectFit: 'cover',
               border: '1px solid',
