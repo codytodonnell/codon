@@ -52,7 +52,12 @@ Once I had a fleshed out static prototype, I wanted to get feedback from my user
 
 While some pieces of the static prototype tested well, such as the overall information architecture and map-based visualizations, others did not. Based on the prototype tests with users, I decided to scrap the non-geospatial visualization component of the tool and focus my efforts on the geospatial map views instead. Another major breakthrough that happened at this point in the project was my discovery of a data source for community data. Originally I had planned to build in the crowdsourcing functionality into ReefGauge, but after discovering a platform called iNaturalist, I saw an opportunity to leverage their existing infrastructure. The final functional prototype includes a map visualization that users can toggle between scientific reef assessment data and community-sourced reef observation data. The scientific data is sourced from a site called the Atlantic and Gulf Rapid Reef Assessment (AGRRA) and the community data is sourced through a citizen science platform called iNaturalist. Leveraging iNaturalist’s Project feature, I was able to build my own citizen science initiative that sources observations of the reef species I am targeting. This lets my ReefGauge encourage an initiative around reef data collection while offloading the data input functionality to iNaturalist.
 
-![ReefGauge functional web app prototype](/images/projects/reefgauge/rg-functional-2.png)
+![ReefGauge functional web app prototype 1](/images/projects/reefgauge/rg-functional-2.png)
+
+![ReefGauge functional web app prototype 2](/images/projects/reefgauge/rg-functional-3.png)
+
+![ReefGauge functional web app prototype 3](/images/projects/reefgauge/rg-functional-4.png)
+
 
 ## Usability Tests
 
