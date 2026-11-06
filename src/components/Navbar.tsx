@@ -83,7 +83,6 @@ export const Navbar = () => {
             direction="row"
             spacing={1}
             sx={{
-              margin: 1,
               padding: 0.5,
               position: 'relative',
               overflow: 'hidden',
@@ -120,6 +119,7 @@ export const Navbar = () => {
                     paddingY: 0.5,
                     paddingX: 1.5,
                     borderRadius: 10,
+                    fontSize: isMobile ? '1rem' : '1.15rem',
                     textDecoration: 'none',
                     transition: '0.25s',
                     '&:hover': {
